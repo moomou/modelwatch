@@ -1,0 +1,1860 @@
+{
+  "$schema": "./models.schema.json",
+  "lastVerified": "2026-11-11",
+  "companies": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "shortName": "OpenAI",
+      "country": "US",
+      "website": "https://openai.com",
+      "accent": "#10a37f",
+      "summary": "Frontier GPT-6 Astra/Sol/Terra/Luna tiers, Codex/Cyber specialists, and Realtime voice models."
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "shortName": "Anthropic",
+      "country": "US",
+      "website": "https://www.anthropic.com",
+      "accent": "#d97757",
+      "summary": "Four-tier Claude lineup spanning Mythos/Fable ultra-frontier, Opus, Sonnet, and Haiku."
+    },
+    {
+      "id": "google",
+      "name": "Google DeepMind",
+      "shortName": "Google",
+      "country": "US",
+      "website": "https://deepmind.google",
+      "accent": "#4285f4",
+      "summary": "Gemini 4 Argon & Carbon reasoning flagships, Gemini Flash, Gemma open weights, and Nano Banana / Omni."
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "shortName": "xAI",
+      "country": "US",
+      "website": "https://x.ai",
+      "accent": "#6366f1",
+      "summary": "Rapid-cadence Grok 4.x reasoning flagships and low-latency Grok Voice models."
+    },
+    {
+      "id": "meta",
+      "name": "Meta AI",
+      "shortName": "Meta",
+      "country": "US",
+      "website": "https://ai.meta.com",
+      "accent": "#0668e1",
+      "summary": "Meta Superintelligence Labs' Muse frontier & open-weight MoE models alongside the Llama lineage."
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "shortName": "DeepSeek",
+      "country": "CN",
+      "website": "https://www.deepseek.com",
+      "accent": "#2563eb",
+      "summary": "High-efficiency open-weight MoE flagships across the DeepSeek V4 Pro, V4.1 Flash, and R1 lines."
+    },
+    {
+      "id": "alibaba",
+      "name": "Alibaba Qwen",
+      "shortName": "Qwen",
+      "country": "CN",
+      "website": "https://qwen.ai",
+      "accent": "#7c3aed",
+      "summary": "Qwen3.8 Max proprietary frontier alongside prolific Apache-2.0 open-weight and Omni-Flash releases."
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "shortName": "Mistral",
+      "country": "FR",
+      "website": "https://mistral.ai",
+      "accent": "#f97316",
+      "summary": "European frontier lab shipping Mistral Large 4 (1T MoE), Medium/Small workhorses, and Voxtral audio."
+    },
+    {
+      "id": "moonshot",
+      "name": "Moonshot AI",
+      "shortName": "Kimi",
+      "country": "CN",
+      "website": "https://www.kimi.ai",
+      "accent": "#0ea5e9",
+      "summary": "Creator of the Kimi K2 and K3 open-weight agentic reasoning and coding models."
+    },
+    {
+      "id": "zai",
+      "name": "Z.AI (GLM)",
+      "shortName": "Z.AI",
+      "country": "CN",
+      "website": "https://z.ai",
+      "accent": "#14b8a6",
+      "summary": "Consistent ~60-day cadence across GLM-5.x frontier reasoning and Flash/Turbo multimodal models."
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "shortName": "MiniMax",
+      "country": "CN",
+      "website": "https://www.minimax.io",
+      "accent": "#ec4899",
+      "summary": "Long-context MoE models across the MiniMax M1, M2, and M3 agentic series."
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft AI",
+      "shortName": "Microsoft",
+      "country": "US",
+      "website": "https://microsoft.ai",
+      "accent": "#00a4ef",
+      "summary": "In-house MAI reasoning, coding, and voice models alongside the open-weight Phi small-model family."
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "shortName": "NVIDIA",
+      "country": "US",
+      "website": "https://build.nvidia.com",
+      "accent": "#76b900",
+      "summary": "Open-weight Nemotron 3 & 3.5 Super/Ultra reasoning and multimodal models."
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "shortName": "Cohere",
+      "country": "CA",
+      "website": "https://cohere.com",
+      "accent": "#39594d",
+      "summary": "Enterprise multilingual RAG, tool-use, and retrieval models led by Command A+."
+    }
+  ],
+  "lines": [
+    {
+      "id": "openai-flagship",
+      "companyId": "openai",
+      "name": "GPT Flagship (Astra / Pro)",
+      "tierLabel": "Apex Frontier",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "OpenAI's highest-intelligence frontier model tier, evolving from GPT-4 and Pro editions into GPT-6 Astra.",
+      "releases": [
+        {
+          "version": "GPT-4",
+          "releasedAt": "2023-03-14",
+          "highlights": "Multimodal image-input frontier model with major reasoning leap over GPT-3.5.",
+          "sourceUrl": "https://openai.com/index/gpt-4/"
+        },
+        {
+          "version": "GPT-4 Turbo",
+          "releasedAt": "2023-11-06",
+          "highlights": "128K context window, JSON mode, and lower API pricing unveiled at DevDay.",
+          "sourceUrl": "https://openai.com/index/new-models-and-developer-products-announced-at-devday/"
+        },
+        {
+          "version": "GPT-4o",
+          "releasedAt": "2024-05-13",
+          "highlights": "First unified omni flagship handling text, vision, and audio natively.",
+          "sourceUrl": "https://openai.com/index/hello-gpt-4o/"
+        },
+        {
+          "version": "GPT-4.5",
+          "releasedAt": "2025-02-27",
+          "highlights": "Scaled unsupervised pre-training research preview with stronger EQ and writing.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-4-5/"
+        },
+        {
+          "version": "GPT-5",
+          "releasedAt": "2025-08-07",
+          "highlights": "Unified flagship combining fast generation and routed deep reasoning.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/"
+        },
+        {
+          "version": "GPT-5.2 Pro",
+          "releasedAt": "2025-12-11",
+          "highlights": "Extended compute frontier tier accompanying the GPT-5.2 family launch.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/"
+        },
+        {
+          "version": "GPT-5.4 Pro",
+          "releasedAt": "2026-03-05",
+          "highlights": "Expanded long-horizon reasoning and professional benchmark accuracy.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-4/"
+        },
+        {
+          "version": "GPT-5.5 Pro",
+          "releasedAt": "2026-04-23",
+          "highlights": "Unified mainline coding and deep research intelligence.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/"
+        },
+        {
+          "version": "GPT-6 Astra",
+          "releasedAt": "2026-09-03",
+          "highlights": "Next-generation apex frontier model across reasoning, science, and alignment.",
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+        }
+      ]
+    },
+    {
+      "id": "openai-sol",
+      "companyId": "openai",
+      "name": "GPT Sol",
+      "tierLabel": "Frontier Reasoning",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Primary developer reasoning & coding tier descending from o1/o3 and GPT-5 Thinking into the named Sol lane.",
+      "releases": [
+        {
+          "version": "o1",
+          "releasedAt": "2024-12-05",
+          "highlights": "Full production release of OpenAI's first chain-of-thought reasoning model.",
+          "sourceUrl": "https://openai.com/index/o1-and-new-tools-for-developers/"
+        },
+        {
+          "version": "o3",
+          "releasedAt": "2025-04-16",
+          "highlights": "Agentic tool-using reasoning model with visual thinking capabilities.",
+          "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/"
+        },
+        {
+          "version": "GPT-5 Thinking",
+          "releasedAt": "2025-08-07",
+          "highlights": "Merged o-series reasoning and GPT multimodal stacks into one developer flagship.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/"
+        },
+        {
+          "version": "GPT-5.1",
+          "releasedAt": "2025-11-13",
+          "highlights": "Adaptive reasoning latency and improved developer steerability.",
+          "sourceUrl": "https://openai.com/index/gpt-5-1-for-developers/"
+        },
+        {
+          "version": "GPT-5.2",
+          "releasedAt": "2025-12-11",
+          "highlights": "Stronger multi-step software engineering and structured knowledge work.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-2/"
+        },
+        {
+          "version": "GPT-5.4",
+          "releasedAt": "2026-03-05",
+          "highlights": "Substantial reliability gains on agentic tool orchestration.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-4/"
+        },
+        {
+          "version": "GPT-5.5",
+          "releasedAt": "2026-04-23",
+          "highlights": "Direct Codex integration and stronger autonomous verification.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/"
+        },
+        {
+          "version": "GPT-5.6 Sol",
+          "releasedAt": "2026-07-09",
+          "highlights": "Introduced the durable Sol capability tier for complex reasoning.",
+          "sourceUrl": "https://openai.com/index/gpt-5-6/"
+        },
+        {
+          "version": "GPT-6 Sol",
+          "releasedAt": "2026-09-22",
+          "highlights": "Brought GPT-6 training methods to the high-throughput frontier Sol tier.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+        },
+        {
+          "version": "GPT-6.1 Sol",
+          "releasedAt": "2026-09-29",
+          "highlights": "Targeted upgrade for complex coding and sustained professional workflows.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        }
+      ]
+    },
+    {
+      "id": "openai-terra",
+      "companyId": "openai",
+      "name": "GPT Terra",
+      "tierLabel": "Balanced Workhorse",
+      "category": "workhorse",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Balanced intelligence-to-cost tier optimized for visual reasoning, computer use, and everyday production apps.",
+      "releases": [
+        {
+          "version": "GPT-4.1",
+          "releasedAt": "2025-04-14",
+          "highlights": "1M-token API workhorse tuned for instruction following and long-context coding.",
+          "sourceUrl": "https://openai.com/index/gpt-4-1/"
+        },
+        {
+          "version": "GPT-5.3 Instant",
+          "releasedAt": "2026-03-03",
+          "highlights": "Low-latency everyday ChatGPT and API workhorse generation.",
+          "sourceUrl": "https://openai.com/index/gpt-5-3-instant/"
+        },
+        {
+          "version": "GPT-5.6 Terra",
+          "releasedAt": "2026-07-09",
+          "highlights": "Established the named Terra tier balancing frontier capability and cost.",
+          "sourceUrl": "https://openai.com/index/gpt-5-6/"
+        },
+        {
+          "version": "GPT-6.1 Terra",
+          "releasedAt": "2026-10-26",
+          "highlights": "Upgraded visual reasoning, precise computer use, and natural writing.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/"
+        }
+      ]
+    },
+    {
+      "id": "openai-luna",
+      "companyId": "openai",
+      "name": "GPT Luna / Mini",
+      "tierLabel": "Fast & Compact",
+      "category": "fast",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "OpenAI's lowest-latency, high-volume model line evolving from 4o mini and o-mini into GPT Luna.",
+      "releases": [
+        {
+          "version": "GPT-4o mini",
+          "releasedAt": "2024-07-18",
+          "highlights": "Replaced GPT-3.5 Turbo with dramatically cheaper multimodal inference.",
+          "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/"
+        },
+        {
+          "version": "o3-mini",
+          "releasedAt": "2025-01-31",
+          "highlights": "Fast STEM and coding reasoning model with configurable effort.",
+          "sourceUrl": "https://openai.com/index/openai-o3-mini/"
+        },
+        {
+          "version": "o4-mini",
+          "releasedAt": "2025-04-16",
+          "highlights": "Added tool use and visual reasoning to the compact reasoning tier.",
+          "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/"
+        },
+        {
+          "version": "GPT-5 mini & nano",
+          "releasedAt": "2025-08-07",
+          "highlights": "Unified compact companion tiers launched alongside GPT-5.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-for-developers/"
+        },
+        {
+          "version": "GPT-5.4 mini & nano",
+          "releasedAt": "2026-03-17",
+          "highlights": "Refreshed small tiers for high-concurrency subagents and classification.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/"
+        },
+        {
+          "version": "GPT-5.6 Luna",
+          "releasedAt": "2026-07-09",
+          "highlights": "Introduced the Luna naming for OpenAI's fastest, lowest-cost tier.",
+          "sourceUrl": "https://openai.com/index/gpt-5-6/"
+        },
+        {
+          "version": "GPT-6 Luna",
+          "releasedAt": "2026-09-22",
+          "highlights": "GPT-6 generation speed and cost efficiency upgrade.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+        }
+      ]
+    },
+    {
+      "id": "openai-codex-cyber",
+      "companyId": "openai",
+      "name": "GPT Codex & Cyber",
+      "tierLabel": "Code & Security",
+      "category": "coding",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Specialized software-engineering and Daybreak defensive-cybersecurity models.",
+      "releases": [
+        {
+          "version": "GPT-5-Codex",
+          "releasedAt": "2025-09-23",
+          "highlights": "Dedicated agentic coding model tuned for long-running repo tasks.",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog"
+        },
+        {
+          "version": "GPT-5.1-Codex",
+          "releasedAt": "2025-11-13",
+          "highlights": "Faster terminal-agent execution plus Codex-Mini and Codex-Max variants.",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog"
+        },
+        {
+          "version": "GPT-5.2-Codex",
+          "releasedAt": "2025-12-18",
+          "highlights": "Improved multi-file refactoring and vulnerability patching.",
+          "sourceUrl": "https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf"
+        },
+        {
+          "version": "GPT-5.3-Codex",
+          "releasedAt": "2026-02-05",
+          "highlights": "High-autonomy coding specialist followed by ultra-fast Codex-Spark.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-5-3-codex/"
+        },
+        {
+          "version": "GPT-5.6 Cyber",
+          "releasedAt": "2026-08-10",
+          "highlights": "Daybreak Red defensive cyber model for auditing and remediation.",
+          "sourceUrl": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+        },
+        {
+          "version": "GPT-6 Cyber",
+          "releasedAt": "2026-11-05",
+          "highlights": "GPT-6 generation defensive cybersecurity and binary/source auditing model.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-6-cyber/"
+        }
+      ]
+    },
+    {
+      "id": "openai-realtime",
+      "companyId": "openai",
+      "name": "GPT Realtime & Live",
+      "tierLabel": "Voice & Live API",
+      "category": "multimodal",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Low-latency speech-to-speech and live multimodal streaming API models.",
+      "releases": [
+        {
+          "version": "GPT-4o Audio",
+          "releasedAt": "2024-10-17",
+          "highlights": "Native audio input and expressive speech output in the API.",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog"
+        },
+        {
+          "version": "GPT Realtime",
+          "releasedAt": "2025-08-28",
+          "highlights": "Production speech-to-speech model with stronger function calling.",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog"
+        },
+        {
+          "version": "GPT Realtime 1.5",
+          "releasedAt": "2026-02-23",
+          "highlights": "Improved interruption handling and instruction adherence.",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog"
+        },
+        {
+          "version": "GPT Realtime 2.1",
+          "releasedAt": "2026-07-06",
+          "highlights": "Released alongside Realtime 2.1 Mini for lower-cost voice agents.",
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1"
+        },
+        {
+          "version": "GPT-Live-1",
+          "releasedAt": "2026-09-10",
+          "highlights": "Next-generation real-time multimodal voice and live interaction API model.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+        }
+      ]
+    },
+    {
+      "id": "openai-oss",
+      "companyId": "openai",
+      "name": "GPT-OSS",
+      "tierLabel": "Open Weights",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "OpenAI's open-weight Apache-2.0 reasoning models (120B and 20B) for self-hosted deployment.",
+      "releases": [
+        {
+          "version": "GPT-OSS 120B & 20B",
+          "releasedAt": "2025-08-05",
+          "highlights": "OpenAI's first open-weight language models since GPT-2, under Apache 2.0.",
+          "sourceUrl": "https://openai.com/index/introducing-gpt-oss/"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-fable",
+      "companyId": "anthropic",
+      "name": "Claude Fable / Mythos",
+      "tierLabel": "Mythos Apex Tier",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Anthropic's ultra-premium Mythos-class tier above Opus with 1M context and always-on adaptive thinking.",
+      "releases": [
+        {
+          "version": "Claude Mythos Preview",
+          "releasedAt": "2026-04-07",
+          "highlights": "Introduced via Project Glasswing as Anthropic's restricted ultra-frontier preview.",
+          "sourceUrl": "https://www.anthropic.com/glasswing"
+        },
+        {
+          "version": "Claude Fable 5 & Mythos 5",
+          "releasedAt": "2026-06-09",
+          "highlights": "First public Mythos-class tier (Fable 5) with 1M context and 128K output.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+        },
+        {
+          "version": "Claude Fable 5.1 & Mythos 5.1",
+          "releasedAt": "2026-09-01",
+          "highlights": "Second-generation Mythos tier with 75% cheaper prompt-cache reads.",
+          "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+        },
+        {
+          "version": "Claude Fable 5.2 & Mythos 5.2",
+          "releasedAt": "2026-11-09",
+          "highlights": "Up to 30% faster output generation at lower per-token pricing.",
+          "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-opus",
+      "companyId": "anthropic",
+      "name": "Claude Opus",
+      "tierLabel": "Frontier",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Anthropic's flagship public reasoning and autonomous coding tier.",
+      "releases": [
+        {
+          "version": "Claude 3 Opus",
+          "releasedAt": "2024-03-04",
+          "highlights": "Inaugural Opus flagship with vision input across the Claude 3 lineup.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-3-family"
+        },
+        {
+          "version": "Claude Opus 4",
+          "releasedAt": "2025-05-22",
+          "highlights": "Extended thinking with tool use, memory features, and Claude Code GA.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-4"
+        },
+        {
+          "version": "Claude Opus 4.1",
+          "releasedAt": "2025-08-05",
+          "highlights": "Sharper SWE-bench coding accuracy and multi-file precision.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-1"
+        },
+        {
+          "version": "Claude Opus 4.5",
+          "releasedAt": "2025-11-24",
+          "highlights": "Introduced the effort parameter, context compaction, and lower Opus pricing.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-5"
+        },
+        {
+          "version": "Claude Opus 4.6",
+          "releasedAt": "2026-02-05",
+          "highlights": "1M context beta, 128K output tokens, adaptive thinking, and agent teams.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-6"
+        },
+        {
+          "version": "Claude Opus 4.7",
+          "releasedAt": "2026-04-16",
+          "highlights": "Added xhigh effort, higher-res vision, and cross-session memory.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7"
+        },
+        {
+          "version": "Claude Opus 4.8",
+          "releasedAt": "2026-05-28",
+          "highlights": "4x lower silent-flaw rate in generated code plus Dynamic Workflows preview.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-8"
+        },
+        {
+          "version": "Claude Opus 5",
+          "releasedAt": "2026-07-24",
+          "highlights": "Near-Fable 5 intelligence at half the cost with default 1M context.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-opus-5"
+        },
+        {
+          "version": "Claude Opus 5.5",
+          "releasedAt": "2026-09-22",
+          "highlights": "Matches Fable 5.1 on most workloads while cutting typical run cost ~40%.",
+          "sourceUrl": "https://www.anthropic.com/claude-opus-5-5"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-sonnet",
+      "companyId": "anthropic",
+      "name": "Claude Sonnet",
+      "tierLabel": "Balanced Workhorse",
+      "category": "workhorse",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Anthropic's high-volume coding, computer-use, and enterprise agent workhorse.",
+      "releases": [
+        {
+          "version": "Claude 3 Sonnet",
+          "releasedAt": "2024-03-04",
+          "highlights": "Balanced enterprise tier launched with the Claude 3 family.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-3-family"
+        },
+        {
+          "version": "Claude 3.5 Sonnet",
+          "releasedAt": "2024-06-20",
+          "highlights": "Surpassed Claude 3 Opus at Sonnet speed alongside Artifacts.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-3-5-sonnet"
+        },
+        {
+          "version": "Claude 3.5 Sonnet (v2)",
+          "releasedAt": "2024-10-22",
+          "highlights": "Major coding jump and the first public Computer Use beta.",
+          "sourceUrl": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+        },
+        {
+          "version": "Claude 3.7 Sonnet",
+          "releasedAt": "2025-02-24",
+          "highlights": "First hybrid extended-thinking Claude model, debuting with Claude Code.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-3-7-sonnet"
+        },
+        {
+          "version": "Claude Sonnet 4",
+          "releasedAt": "2025-05-22",
+          "highlights": "Claude 4 workhorse; later gained the 1M-token context beta.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-4"
+        },
+        {
+          "version": "Claude Sonnet 4.5",
+          "releasedAt": "2025-09-29",
+          "highlights": "Context editing, memory tool, and stronger long-horizon agent execution.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5"
+        },
+        {
+          "version": "Claude Sonnet 4.6",
+          "releasedAt": "2026-02-17",
+          "highlights": "Preferred over Opus 4.5 in 59% of user evaluations at Sonnet pricing.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-6"
+        },
+        {
+          "version": "Claude Sonnet 5",
+          "releasedAt": "2026-06-30",
+          "highlights": "Near-Opus coding and agentic capability at Sonnet latency.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-5"
+        },
+        {
+          "version": "Claude Sonnet 5.5",
+          "releasedAt": "2026-09-28",
+          "highlights": "Next-generation 5.5 coding, tool use, and computer-use workhorse.",
+          "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-haiku",
+      "companyId": "anthropic",
+      "name": "Claude Haiku",
+      "tierLabel": "Fast & Compact",
+      "category": "fast",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Anthropic's fastest, lowest-cost tier refreshed on an approximately annual October rhythm.",
+      "releases": [
+        {
+          "version": "Claude 3 Haiku",
+          "releasedAt": "2024-03-13",
+          "highlights": "Sub-second multimodal model for high-volume moderation and routing.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-3-haiku"
+        },
+        {
+          "version": "Claude 3.5 Haiku",
+          "releasedAt": "2024-10-22",
+          "highlights": "Matched Claude 3 Opus on coding benchmarks at compact-tier speed.",
+          "sourceUrl": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+        },
+        {
+          "version": "Claude Haiku 4.5",
+          "releasedAt": "2025-10-15",
+          "highlights": "First Haiku with extended thinking and Computer Use support.",
+          "sourceUrl": "https://www.anthropic.com/news/claude-haiku-4-5"
+        },
+        {
+          "version": "Claude Haiku 5.5",
+          "releasedAt": "2026-10-07",
+          "highlights": "5.5-generation speed tier for subagents and real-time workflows.",
+          "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ]
+    },
+    {
+      "id": "google-gemini-pro",
+      "companyId": "google",
+      "name": "Gemini Flagship (Pro / Argon / Carbon)",
+      "tierLabel": "Frontier Reasoning",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Google DeepMind's top multimodal reasoning line from Gemini Pro to Gemini 4 Argon and Carbon.",
+      "releases": [
+        {
+          "version": "Gemini 1.0 Pro",
+          "releasedAt": "2023-12-06",
+          "highlights": "Inaugural natively multimodal Gemini generation.",
+          "sourceUrl": "https://blog.google/technology/ai/google-gemini-ai/"
+        },
+        {
+          "version": "Gemini 1.5 Pro",
+          "releasedAt": "2024-02-15",
+          "highlights": "Sparse MoE architecture pioneering the 1M-token context window.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/"
+        },
+        {
+          "version": "Gemini 2.0 Pro",
+          "releasedAt": "2025-02-05",
+          "highlights": "2M context window with native tool use and code execution.",
+          "sourceUrl": "https://developers.googleblog.com/en/gemini-2-family-expands/"
+        },
+        {
+          "version": "Gemini 2.5 Pro",
+          "releasedAt": "2025-03-25",
+          "highlights": "Built-in thinking budgets with breakthrough coding and math scores.",
+          "sourceUrl": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025"
+        },
+        {
+          "version": "Gemini 3 Pro",
+          "releasedAt": "2025-11-18",
+          "highlights": "Foundational 3.x sparse MoE surpassing 1500 Elo on LMArena.",
+          "sourceUrl": "https://deepmind.google/models/gemini/"
+        },
+        {
+          "version": "Gemini 3.1 Pro",
+          "releasedAt": "2026-02-19",
+          "highlights": "Expanded multimodal codebase, audio, and video reasoning.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/"
+        },
+        {
+          "version": "Gemini 4 Argon",
+          "releasedAt": "2026-10-13",
+          "highlights": "API GA with 1M output token ceiling for complex coding and science.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+        },
+        {
+          "version": "Gemini 4 Carbon",
+          "releasedAt": "2026-11-10",
+          "highlights": "API GA for DeepMind's most capable sustained agentic and scientific model.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        }
+      ]
+    },
+    {
+      "id": "google-gemini-flash",
+      "companyId": "google",
+      "name": "Gemini Flash",
+      "tierLabel": "High-Speed Workhorse",
+      "category": "workhorse",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "High-efficiency multimodal reasoning workhorse iterating rapidly through the Gemini 3.x Flash series.",
+      "releases": [
+        {
+          "version": "Gemini 1.5 Flash",
+          "releasedAt": "2024-05-14",
+          "highlights": "Introduced at Google I/O with 1M context at low latency.",
+          "sourceUrl": "https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/"
+        },
+        {
+          "version": "Gemini 2.0 Flash",
+          "releasedAt": "2025-02-05",
+          "highlights": "General availability of agentic 2.0 multimodal workhorse.",
+          "sourceUrl": "https://developers.googleblog.com/en/gemini-2-family-expands/"
+        },
+        {
+          "version": "Gemini 2.5 Flash",
+          "releasedAt": "2025-06-17",
+          "highlights": "Controllable thinking budgets in the high-speed Flash tier.",
+          "sourceUrl": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-model-family-expands/"
+        },
+        {
+          "version": "Gemini 3 Flash",
+          "releasedAt": "2025-12-17",
+          "highlights": "3.x architecture distilled for interactive agentic speed.",
+          "sourceUrl": "https://deepmind.google/models/gemini/"
+        },
+        {
+          "version": "Gemini 3.5 Flash",
+          "releasedAt": "2026-05-19",
+          "highlights": "Upgraded tool calling and thought-signature reasoning.",
+          "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog"
+        },
+        {
+          "version": "Gemini 3.6 Flash",
+          "releasedAt": "2026-07-21",
+          "highlights": "Higher token efficiency and stronger coding performance.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+        },
+        {
+          "version": "Gemini 3.7 Flash",
+          "releasedAt": "2026-08-13",
+          "highlights": "Core reasoning foundation upgrade across agentic tasks.",
+          "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash"
+        },
+        {
+          "version": "Gemini 3.8 Flash",
+          "releasedAt": "2026-09-02",
+          "highlights": "Current Flash flagship alongside Fairwind 3.8 Flash Cyber.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+        }
+      ]
+    },
+    {
+      "id": "google-gemini-flash-lite",
+      "companyId": "google",
+      "name": "Gemini Flash-Lite",
+      "tierLabel": "Ultra-Low-Cost",
+      "category": "fast",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Google's highest-throughput, lowest-cost API tier for classification, extraction, and scale.",
+      "releases": [
+        {
+          "version": "Gemini 2.0 Flash-Lite",
+          "releasedAt": "2025-02-25",
+          "highlights": "Inaugural Flash-Lite tier built for massive-scale token economics.",
+          "sourceUrl": "https://developers.googleblog.com/en/start-building-with-the-gemini-2-0-flash-family/"
+        },
+        {
+          "version": "Gemini 2.5 Flash-Lite",
+          "releasedAt": "2025-07-22",
+          "highlights": "Added optional thinking at ultra-low latency.",
+          "sourceUrl": "https://developers.googleblog.com/en/gemini-25-flash-lite-is-now-stable-and-generally-available/"
+        },
+        {
+          "version": "Gemini 3.1 Flash-Lite",
+          "releasedAt": "2026-03-03",
+          "highlights": "Gemini 3 generation efficiency for translation and routing.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/"
+        },
+        {
+          "version": "Gemini 3.5 Flash-Lite",
+          "releasedAt": "2026-07-21",
+          "highlights": "Current high-throughput default replacing 2.5 Flash routes.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+        }
+      ]
+    },
+    {
+      "id": "google-gemma",
+      "companyId": "google",
+      "name": "Gemma",
+      "tierLabel": "Open Weights",
+      "category": "workhorse",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Google's open-weight model family built from Gemini research for local and cloud deployment.",
+      "releases": [
+        {
+          "version": "Gemma 1 (2B & 7B)",
+          "releasedAt": "2024-02-21",
+          "highlights": "First open-weight Gemma release for developer workstations.",
+          "sourceUrl": "https://ai.google.dev/gemma/docs/releases"
+        },
+        {
+          "version": "Gemma 2 (9B & 27B)",
+          "releasedAt": "2024-06-27",
+          "highlights": "Sliding-window attention and knowledge distillation leap.",
+          "sourceUrl": "https://blog.google/technology/developers/google-gemma-2/"
+        },
+        {
+          "version": "Gemma 3 (1B–27B)",
+          "releasedAt": "2025-03-12",
+          "highlights": "128K context, vision support, and wide multilingual coverage.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/"
+        },
+        {
+          "version": "Gemma 4 (E2B–31B)",
+          "releasedAt": "2026-04-02",
+          "highlights": "Dense 31B, MoE 26B-A4B, and edge E2B/E4B open-weight suite.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/"
+        },
+        {
+          "version": "Gemma 4 12B Unified",
+          "releasedAt": "2026-06-03",
+          "highlights": "Unified multimodal architecture in a single-GPU 12B footprint.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12B/"
+        }
+      ]
+    },
+    {
+      "id": "google-nano-banana",
+      "companyId": "google",
+      "name": "Nano Banana & Omni",
+      "tierLabel": "Image & Video Gen",
+      "category": "multimodal",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Conversational image and video generation models from Nano Banana to Gemini Omni Flash.",
+      "releases": [
+        {
+          "version": "Nano Banana (2.5 Flash Image)",
+          "releasedAt": "2025-08-26",
+          "highlights": "Viral conversational image editing with character consistency.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        },
+        {
+          "version": "Nano Banana Pro (3 Pro Image)",
+          "releasedAt": "2025-11-20",
+          "highlights": "Crisp typography rendering and grounded world knowledge.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        },
+        {
+          "version": "Nano Banana 2 (3.1 Flash Image)",
+          "releasedAt": "2026-02-26",
+          "highlights": "Flash-speed native interleaved text-and-image generation.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+        },
+        {
+          "version": "Nano Banana 2 Lite",
+          "releasedAt": "2026-06-30",
+          "highlights": "Cost-optimized image synthesis built on 3.1 Flash-Lite.",
+          "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog"
+        },
+        {
+          "version": "Nano Banana 2.1",
+          "releasedAt": "2026-10-06",
+          "highlights": "4K & panoramic aspect ratios with stronger multi-turn consistency.",
+          "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog"
+        },
+        {
+          "version": "Gemini Omni 1.2 Flash",
+          "releasedAt": "2026-11-05",
+          "highlights": "15s video generation, conversational video editing, and 30% lower cost.",
+          "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog"
+        }
+      ]
+    },
+    {
+      "id": "xai-grok-flagship",
+      "companyId": "xai",
+      "name": "Grok Flagship",
+      "tierLabel": "Frontier Reasoning",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "xAI's flagship Colossus-trained reasoning line shipping rapid point upgrades across Grok 4.x.",
+      "releases": [
+        {
+          "version": "Grok-2",
+          "releasedAt": "2024-08-13",
+          "highlights": "Major jump in coding, reasoning, and X real-time synthesis.",
+          "sourceUrl": "https://x.ai/news/grok-2"
+        },
+        {
+          "version": "Grok 3",
+          "releasedAt": "2025-02-19",
+          "highlights": "Introduced Think mode and DeepSearch trained on Colossus.",
+          "sourceUrl": "https://x.ai/blog/grok-3"
+        },
+        {
+          "version": "Grok 4",
+          "releasedAt": "2025-07-09",
+          "highlights": "Tool-native reasoning flagship launched alongside multi-agent Grok 4 Heavy.",
+          "sourceUrl": "https://x.ai/news/grok-4/"
+        },
+        {
+          "version": "Grok 4.1",
+          "releasedAt": "2025-11-17",
+          "highlights": "Lower hallucination rates and sharper creative & technical writing.",
+          "sourceUrl": "https://x.ai/company"
+        },
+        {
+          "version": "Grok 4.20",
+          "releasedAt": "2026-03-10",
+          "highlights": "1M context API release with native multi-agent reasoning.",
+          "sourceUrl": "https://docs.x.ai/developers/release-notes"
+        },
+        {
+          "version": "Grok 4.3",
+          "releasedAt": "2026-04-30",
+          "highlights": "Rich document, spreadsheet, and slide artifact generation.",
+          "sourceUrl": "https://docs.x.ai/developers/release-notes"
+        },
+        {
+          "version": "Grok 4.5",
+          "releasedAt": "2026-07-08",
+          "highlights": "500K context developer flagship with major IDE agent gains.",
+          "sourceUrl": "https://docs.x.ai/developers/models/grok-4.5"
+        },
+        {
+          "version": "Grok 4.6",
+          "releasedAt": "2026-08-12",
+          "highlights": "Four configurable reasoning effort levels up to xhigh.",
+          "sourceUrl": "https://x.ai/news/grok-4-6"
+        },
+        {
+          "version": "Grok 4.7",
+          "releasedAt": "2026-09-21",
+          "highlights": "Current xAI flagship with stronger coding and agentic tool accuracy.",
+          "sourceUrl": "https://x.ai/news/grok-4-7"
+        }
+      ]
+    },
+    {
+      "id": "xai-grok-fast",
+      "companyId": "xai",
+      "name": "Grok Fast / Mini",
+      "tierLabel": "Fast Reasoning",
+      "category": "fast",
+      "access": "proprietary",
+      "lifecycle": "consolidated",
+      "lifecycleNote": "Standalone Fast SKUs were retired in May 2026 as configurable effort levels merged into mainline Grok 4.6+.",
+      "summary": "xAI's dedicated low-latency reasoning and coding SKUs prior to consolidation into Grok 4.6+ effort tiers.",
+      "releases": [
+        {
+          "version": "Grok-2 mini",
+          "releasedAt": "2024-08-13",
+          "highlights": "Compact low-latency companion to Grok-2.",
+          "sourceUrl": "https://x.ai/news/grok-2"
+        },
+        {
+          "version": "Grok 3 Mini",
+          "releasedAt": "2025-02-19",
+          "highlights": "Cost-efficient STEM and logic reasoning model.",
+          "sourceUrl": "https://x.ai/blog/grok-3"
+        },
+        {
+          "version": "Grok Code Fast 1",
+          "releasedAt": "2025-08-28",
+          "highlights": "High-tokens-per-second agentic coding model.",
+          "sourceUrl": "https://x.ai/news/grok-code-fast-1/"
+        },
+        {
+          "version": "Grok 4 Fast",
+          "releasedAt": "2025-09-19",
+          "highlights": "2M-token context window at compact-tier cost.",
+          "sourceUrl": "https://x.ai/news/grok-4-fast"
+        },
+        {
+          "version": "Grok 4.1 Fast",
+          "releasedAt": "2025-11-19",
+          "highlights": "Low-latency tool-calling agent model with 2M context.",
+          "sourceUrl": "https://x.ai/news/grok-4-1-fast"
+        }
+      ]
+    },
+    {
+      "id": "xai-grok-voice",
+      "companyId": "xai",
+      "name": "Grok Voice",
+      "tierLabel": "Voice & Speech",
+      "category": "multimodal",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "xAI's real-time conversational voice, TTS, and spoken reasoning models.",
+      "releases": [
+        {
+          "version": "Grok Realtime",
+          "releasedAt": "2025-12-17",
+          "highlights": "Launched the Grok Voice Agent API for bidirectional audio.",
+          "sourceUrl": "https://x.ai/news/grok-voice-agent-api"
+        },
+        {
+          "version": "Grok TTS",
+          "releasedAt": "2026-03-16",
+          "highlights": "Dedicated expressive text-to-speech endpoint.",
+          "sourceUrl": "https://docs.x.ai/developers/release-notes"
+        },
+        {
+          "version": "Grok Voice Think Fast 1.0",
+          "releasedAt": "2026-04-23",
+          "highlights": "Spoken reasoning with low time-to-first-audio.",
+          "sourceUrl": "https://x.ai/news/grok-voice-think-fast-1"
+        },
+        {
+          "version": "Grok Voice Think Fast 2.0",
+          "releasedAt": "2026-07-29",
+          "highlights": "Faster tool-grounded voice reasoning.",
+          "sourceUrl": "https://x.ai/news/grok-voice-think-fast-2"
+        },
+        {
+          "version": "Grok Voice 3.0",
+          "releasedAt": "2026-10-14",
+          "highlights": "Third-generation expressive multimodal voice architecture.",
+          "sourceUrl": "https://x.ai/news/grok-voice-3"
+        }
+      ]
+    },
+    {
+      "id": "meta-muse-frontier",
+      "companyId": "meta",
+      "name": "Muse Frontier (Spark / Wonder / Ember)",
+      "tierLabel": "Frontier",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Meta Superintelligence Labs' flagship model line powering Meta AI and developer APIs.",
+      "releases": [
+        {
+          "version": "Muse Spark",
+          "releasedAt": "2026-04-08",
+          "highlights": "First flagship from Meta Superintelligence Labs.",
+          "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-msl/"
+        },
+        {
+          "version": "Muse Spark 1.1",
+          "releasedAt": "2026-07-09",
+          "highlights": "Expanded developer availability via the Meta Model API.",
+          "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+        },
+        {
+          "version": "Muse Spark 1.2",
+          "releasedAt": "2026-08-05",
+          "highlights": "Stronger coding and multi-step tool reliability.",
+          "sourceUrl": "https://developer.meta.com/ai/models/muse-spark/"
+        },
+        {
+          "version": "Muse Spark 1.3",
+          "releasedAt": "2026-09-02",
+          "highlights": "Refined reasoning efficiency and multimodal grounding.",
+          "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+        },
+        {
+          "version": "Muse Wonder",
+          "releasedAt": "2026-10-12",
+          "highlights": "Step-change frontier reasoning release alongside Muse Wonder Full.",
+          "sourceUrl": "https://research.meta.ai/blog/muse-wonder"
+        },
+        {
+          "version": "Muse Ember",
+          "releasedAt": "2026-11-09",
+          "highlights": "Latest Meta AI Research frontier model release.",
+          "sourceUrl": "https://research.meta.ai/blog/muse-ember"
+        }
+      ]
+    },
+    {
+      "id": "meta-muse-open",
+      "companyId": "meta",
+      "name": "Muse Open",
+      "tierLabel": "Open Frontier",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Meta's next-generation open-weight agentic and large sparse-MoE family succeeding Llama.",
+      "releases": [
+        {
+          "version": "Muse Glimmer 30B",
+          "releasedAt": "2026-08-10",
+          "highlights": "Compact open-weight agentic model from Meta AI Research.",
+          "sourceUrl": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+        },
+        {
+          "version": "Muse Spark Open (816B-A42B)",
+          "releasedAt": "2026-10-15",
+          "highlights": "816B sparse MoE open-weight flagship on Hugging Face.",
+          "sourceUrl": "https://research.meta.ai/blog/muse-spark-open"
+        }
+      ]
+    },
+    {
+      "id": "meta-llama",
+      "companyId": "meta",
+      "name": "Llama",
+      "tierLabel": "Classic Open Weights",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "consolidated",
+      "lifecycleNote": "Meta shifted 2026 open-weight releases to the Muse Open family (Muse Glimmer & Muse Spark Open).",
+      "summary": "Meta's foundational open-weight LLM series from Llama 2 through Llama 4 Maverick & Scout.",
+      "releases": [
+        {
+          "version": "Llama 2 (7B–70B)",
+          "releasedAt": "2023-07-18",
+          "highlights": "Catalyzed the commercial open-weight LLM ecosystem.",
+          "sourceUrl": "https://ai.meta.com/llama/"
+        },
+        {
+          "version": "Llama 3 (8B & 70B)",
+          "releasedAt": "2024-04-18",
+          "highlights": "15T-token pretraining jump in dense open models.",
+          "sourceUrl": "https://ai.meta.com/blog/meta-llama-3/"
+        },
+        {
+          "version": "Llama 3.1 (8B, 70B & 405B)",
+          "releasedAt": "2024-07-23",
+          "highlights": "128K context and frontier-scale 405B open weights.",
+          "sourceUrl": "https://ai.meta.com/blog/meta-llama-3-1/"
+        },
+        {
+          "version": "Llama 3.3 70B",
+          "releasedAt": "2024-12-06",
+          "highlights": "Matched 3.1 405B quality in a 70B parameter budget.",
+          "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct"
+        },
+        {
+          "version": "Llama 4 Maverick & Scout",
+          "releasedAt": "2025-04-05",
+          "highlights": "Natively multimodal MoE models with up to 10M context on Scout.",
+          "sourceUrl": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v-pro",
+      "companyId": "deepseek",
+      "name": "DeepSeek V-Series Flagship",
+      "tierLabel": "Open Frontier MoE",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "DeepSeek's flagship sparse-MoE open-weight models combining chat, coding, and hybrid thinking.",
+      "releases": [
+        {
+          "version": "DeepSeek-V2.5",
+          "releasedAt": "2024-09-05",
+          "highlights": "Unified general chat and Coder-V2 capabilities in MLA MoE.",
+          "sourceUrl": "https://api-docs.deepseek.com/news/news0905"
+        },
+        {
+          "version": "DeepSeek-V3",
+          "releasedAt": "2024-12-26",
+          "highlights": "671B-A37B FP8-trained MoE matching top closed frontier models.",
+          "sourceUrl": "https://api-docs.deepseek.com/news/news1226"
+        },
+        {
+          "version": "DeepSeek-V3-0324",
+          "releasedAt": "2025-03-24",
+          "highlights": "MIT-licensed checkpoint with major front-end coding gains.",
+          "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324"
+        },
+        {
+          "version": "DeepSeek-V3.1",
+          "releasedAt": "2025-08-21",
+          "highlights": "Hybrid thinking + non-thinking architecture with faster tool agents.",
+          "sourceUrl": "https://api-docs.deepseek.com/news/news250821"
+        },
+        {
+          "version": "DeepSeek-V3.2",
+          "releasedAt": "2025-12-01",
+          "highlights": "DeepSeek Sparse Attention and gold-medal math/coding reasoning.",
+          "sourceUrl": "https://api-docs.deepseek.com/news/news251201"
+        },
+        {
+          "version": "DeepSeek-V4 Pro (0813)",
+          "releasedAt": "2026-08-13",
+          "highlights": "Full GA open-weight V4 Pro flagship checkpoint.",
+          "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v-flash",
+      "companyId": "deepseek",
+      "name": "DeepSeek V-Series Flash",
+      "tierLabel": "Fast Open MoE",
+      "category": "fast",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Ultra-low-cost, high-speed open-weight MoE line introduced with the DeepSeek V4 generation.",
+      "releases": [
+        {
+          "version": "DeepSeek-V4 Flash (0731)",
+          "releasedAt": "2026-07-31",
+          "highlights": "Stable V4 Flash open-weight release for high-throughput agents.",
+          "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+        },
+        {
+          "version": "DeepSeek-V4.1 Flash (1017)",
+          "releasedAt": "2026-10-17",
+          "highlights": "Sharper coding, reasoning, and latency efficiency in V4.1.",
+          "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-r-series",
+      "companyId": "deepseek",
+      "name": "DeepSeek R-Series",
+      "tierLabel": "Dedicated Reasoning",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "consolidated",
+      "lifecycleNote": "Reasoning modes folded directly into DeepSeek V3.1, V3.2, and V4 Pro/Flash; no standalone R2 released yet.",
+      "summary": "Standalone RL-trained open-weight reasoning line that popularized open chain-of-thought.",
+      "releases": [
+        {
+          "version": "DeepSeek-R1",
+          "releasedAt": "2025-01-20",
+          "highlights": "Landmark MIT-licensed reasoning model with distilled 1.5B–70B checkpoints.",
+          "sourceUrl": "https://api-docs.deepseek.com/news/news250120"
+        },
+        {
+          "version": "DeepSeek-R1-0528",
+          "releasedAt": "2025-05-28",
+          "highlights": "Deeper thinking accuracy, JSON output, and lower hallucination rate.",
+          "sourceUrl": "https://api-docs.deepseek.com/news/news250528"
+        }
+      ]
+    },
+    {
+      "id": "qwen-max",
+      "companyId": "alibaba",
+      "name": "Qwen Max",
+      "tierLabel": "Frontier MoE",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Alibaba's largest flagship models culminating in the 2.4-trillion-parameter Qwen3.8 Max.",
+      "releases": [
+        {
+          "version": "Qwen2.5-Max",
+          "releasedAt": "2025-01-28",
+          "highlights": "20T-token MoE flagship on Alibaba Cloud Model Studio.",
+          "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5-max/"
+        },
+        {
+          "version": "Qwen3-Max",
+          "releasedAt": "2025-09-24",
+          "highlights": "Trillion-scale Qwen3 flagship tuned for coding and agents.",
+          "sourceUrl": "https://qwen.ai/blog?id=241398b9cd6353de490b0f82806c7848c5d2777d"
+        },
+        {
+          "version": "Qwen3.6 Max Preview",
+          "releasedAt": "2026-04-20",
+          "highlights": "Expanded multimodal reasoning and agentic tool reliability.",
+          "sourceUrl": "https://qwen.ai/blog?id=qwen3.6-max-preview"
+        },
+        {
+          "version": "Qwen3.7 Max",
+          "releasedAt": "2026-05-16",
+          "highlights": "Stepped-up frontier coding and math benchmark performance.",
+          "sourceUrl": "https://qwen.ai/blog?id=qwen3.7"
+        },
+        {
+          "version": "Qwen3.8 Max (2.4T)",
+          "releasedAt": "2026-08-03",
+          "highlights": "2.4-trillion-parameter flagship topping Alibaba's model stack.",
+          "sourceUrl": "https://qwen.ai/blog?id=qwen3.8"
+        }
+      ]
+    },
+    {
+      "id": "qwen-open",
+      "companyId": "alibaba",
+      "name": "Qwen Open Weights",
+      "tierLabel": "Open Flagship",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Apache-2.0 open-weight dense and MoE flagship releases across Qwen 2.5, 3, 3.5, 3.6, and 3.8.",
+      "releases": [
+        {
+          "version": "Qwen2.5-72B",
+          "releasedAt": "2024-09-19",
+          "highlights": "18T-token open-weight dense flagship across 29+ languages.",
+          "sourceUrl": "https://qwenlm.github.io/blog/qwen2.5/"
+        },
+        {
+          "version": "Qwen3 235B-A22B",
+          "releasedAt": "2025-04-29",
+          "highlights": "Hybrid thinking MoE flagship alongside dense 0.6B–32B suite.",
+          "sourceUrl": "https://qwenlm.github.io/blog/qwen3/"
+        },
+        {
+          "version": "Qwen3 235B (2507)",
+          "releasedAt": "2025-07-21",
+          "highlights": "Dedicated non-thinking and 2507 reasoning upgrades.",
+          "sourceUrl": "https://github.com/QwenLM/Qwen3"
+        },
+        {
+          "version": "Qwen3.5 397B-A17B",
+          "releasedAt": "2026-02-16",
+          "highlights": "Sparse 397B-A17B open flagship followed by 122B and 27B weights.",
+          "sourceUrl": "https://github.com/QwenLM/Qwen3.5"
+        },
+        {
+          "version": "Qwen3.6-27B & 35B-A3B",
+          "releasedAt": "2026-04-21",
+          "highlights": "High-efficiency workstation and single-node open checkpoints.",
+          "sourceUrl": "https://huggingface.co/Qwen/Qwen3.6-27B"
+        },
+        {
+          "version": "Qwen3.8-27B",
+          "releasedAt": "2026-08-05",
+          "highlights": "Open-weight companion distilled from the Qwen3.8 generation.",
+          "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B"
+        }
+      ]
+    },
+    {
+      "id": "qwen-plus-flash",
+      "companyId": "alibaba",
+      "name": "Qwen Plus & Flash",
+      "tierLabel": "Workhorse & Omni",
+      "category": "workhorse",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Rapidly iterating API workhorse and native omni-modal Flash models on Model Studio.",
+      "releases": [
+        {
+          "version": "Qwen3.5 Plus & Flash",
+          "releasedAt": "2026-03-04",
+          "highlights": "Production API tiers for the Qwen3.5 generation.",
+          "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models"
+        },
+        {
+          "version": "Qwen3.6 Plus",
+          "releasedAt": "2026-04-02",
+          "highlights": "Upgraded coding and long-context enterprise API tier.",
+          "sourceUrl": "https://qwen.ai/blog?id=qwen3.6"
+        },
+        {
+          "version": "Qwen3.7 Plus",
+          "releasedAt": "2026-06-03",
+          "highlights": "Multimodal agent intelligence and visual tool calling.",
+          "sourceUrl": "https://www.alibabacloud.com/blog/qwen3-7-plus-multimodal-agent-intelligence_603206"
+        },
+        {
+          "version": "Qwen3.7 Flash",
+          "releasedAt": "2026-07-27",
+          "highlights": "High-speed low-cost serving tier for Qwen3.7.",
+          "sourceUrl": "https://openrouter.ai/qwen/qwen3.7-flash"
+        },
+        {
+          "version": "Qwen3.8-Flash-Next",
+          "releasedAt": "2026-08-26",
+          "highlights": "Next-gen high-throughput Qwen3.8 serving architecture.",
+          "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next"
+        },
+        {
+          "version": "Qwen3.8-Omni-Flash",
+          "releasedAt": "2026-09-18",
+          "highlights": "Real-time text, vision, audio, and video omni-modal Flash model.",
+          "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+        }
+      ]
+    },
+    {
+      "id": "mistral-large",
+      "companyId": "mistral",
+      "name": "Mistral Large",
+      "tierLabel": "Open Frontier MoE",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Mistral AI's top-tier flagship model line culminating in the 1T-parameter Mistral Large 4 MoE.",
+      "releases": [
+        {
+          "version": "Mixtral 8x22B",
+          "releasedAt": "2024-04-17",
+          "highlights": "141B sparse MoE open-weight model with strong coding and math.",
+          "sourceUrl": "https://mistral.ai/news/mixtral-8x22b"
+        },
+        {
+          "version": "Mistral Large 2",
+          "releasedAt": "2024-07-24",
+          "highlights": "123B dense multilingual and coding flagship with 128K context.",
+          "sourceUrl": "https://mistral.ai/news/mistral-large-2407"
+        },
+        {
+          "version": "Mistral Large 3",
+          "releasedAt": "2025-12-02",
+          "highlights": "Launched alongside the Mistral 3 multimodal & reasoning lineup.",
+          "sourceUrl": "https://docs.mistral.ai/models/ministral-3-14b-25-12"
+        },
+        {
+          "version": "Mistral Large 4 (1T-A52B)",
+          "releasedAt": "2026-10-06",
+          "highlights": "1-trillion-parameter sparse MoE (52B active) with open weights.",
+          "sourceUrl": "https://mistral.ai/news/mistral-large-4/"
+        }
+      ]
+    },
+    {
+      "id": "mistral-workhorse",
+      "companyId": "mistral",
+      "name": "Mistral Medium & Small",
+      "tierLabel": "Enterprise Workhorse",
+      "category": "workhorse",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Efficient enterprise and single-node models spanning Mistral Medium, Small, and Ministral.",
+      "releases": [
+        {
+          "version": "Mistral Small 3.1",
+          "releasedAt": "2025-03-17",
+          "highlights": "Apache-2.0 24B multimodal workhorse.",
+          "sourceUrl": "https://mistral.ai/news/mistral-small-3-1"
+        },
+        {
+          "version": "Mistral Medium 3",
+          "releasedAt": "2025-05-07",
+          "highlights": "Enterprise cost-performance leader with hybrid deployment.",
+          "sourceUrl": "https://mistral.ai/news/mistral-medium-3"
+        },
+        {
+          "version": "Ministral 3 (3B–14B)",
+          "releasedAt": "2025-12-02",
+          "highlights": "Edge and single-GPU instruct + reasoning models.",
+          "sourceUrl": "https://docs.mistral.ai/models/ministral-3-14b-25-12"
+        },
+        {
+          "version": "Mistral Small 4",
+          "releasedAt": "2026-03-16",
+          "highlights": "Fourth-gen compact multimodal and reasoning release.",
+          "sourceUrl": "https://mistral.ai/news/mistral-small-4"
+        },
+        {
+          "version": "Mistral Medium 3.5 (128B)",
+          "releasedAt": "2026-04-29",
+          "highlights": "128B model launched alongside Vibe remote coding agents.",
+          "sourceUrl": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5"
+        }
+      ]
+    },
+    {
+      "id": "mistral-voxtral",
+      "companyId": "mistral",
+      "name": "Voxtral",
+      "tierLabel": "Speech & Audio",
+      "category": "multimodal",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Mistral's speech transcription, realtime voice, and TTS model suite.",
+      "releases": [
+        {
+          "version": "Voxtral Transcribe 2",
+          "releasedAt": "2026-02-04",
+          "highlights": "Realtime 4B multilingual speech recognition.",
+          "sourceUrl": "https://mistral.ai/news/voxtral-transcribe-2"
+        },
+        {
+          "version": "Voxtral TTS",
+          "releasedAt": "2026-03-23",
+          "highlights": "4B natural speech synthesis model.",
+          "sourceUrl": "https://mistral.ai/news/voxtral-tts"
+        },
+        {
+          "version": "Voxtral 3",
+          "releasedAt": "2026-10-20",
+          "highlights": "Unified Small/Mini Transcribe 3, Realtime 3, and Voxtral TTS 3 suite.",
+          "sourceUrl": "https://mistral.ai/news/voxtral-3/"
+        }
+      ]
+    },
+    {
+      "id": "moonshot-kimi",
+      "companyId": "moonshot",
+      "name": "Kimi K-Series",
+      "tierLabel": "Open Frontier",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Moonshot AI's trillion-parameter MoE open-weight agentic and coding flagship line.",
+      "releases": [
+        {
+          "version": "Kimi K2",
+          "releasedAt": "2025-07-11",
+          "highlights": "1T-parameter MuonClip-trained open MoE built for agentic tool use.",
+          "sourceUrl": "https://www.kimi.com/blog/kimi-k2.html"
+        },
+        {
+          "version": "Kimi K2.5",
+          "releasedAt": "2026-01-27",
+          "highlights": "Native multimodal reasoning and parallel agent swarm execution.",
+          "sourceUrl": "https://www.kimi.com/blog/kimi-k2-5.html"
+        },
+        {
+          "version": "Kimi K2.6",
+          "releasedAt": "2026-04-20",
+          "highlights": "Improved long-horizon coding and research synthesis.",
+          "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6"
+        },
+        {
+          "version": "Kimi K2.7 Code",
+          "releasedAt": "2026-06-12",
+          "highlights": "Open-weight software engineering specialist checkpoint.",
+          "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K2.7-Code"
+        },
+        {
+          "version": "Kimi K3",
+          "releasedAt": "2026-07-16",
+          "highlights": "Next-generation K3 architecture across reasoning and coding.",
+          "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+        },
+        {
+          "version": "Kimi K3.1 Pro",
+          "releasedAt": "2026-10-23",
+          "highlights": "Top-ranked open-weight K3.1 Pro frontier checkpoint.",
+          "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+        }
+      ]
+    },
+    {
+      "id": "zai-glm-flagship",
+      "companyId": "zai",
+      "name": "GLM Flagship",
+      "tierLabel": "Open Frontier",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Z.AI's flagship agentic coding and reasoning series shipping on a ~2-month cadence.",
+      "releases": [
+        {
+          "version": "GLM-4.5",
+          "releasedAt": "2025-07-28",
+          "highlights": "355B-A32B open MoE unifying reasoning, coding, and agents.",
+          "sourceUrl": "https://docs.bigmodel.cn/cn/update/new-releases"
+        },
+        {
+          "version": "GLM-4.6",
+          "releasedAt": "2025-09-30",
+          "highlights": "200K context and stronger real-world coding agent performance.",
+          "sourceUrl": "https://docs.z.ai/release-notes/new-released"
+        },
+        {
+          "version": "GLM-4.7",
+          "releasedAt": "2025-12-22",
+          "highlights": "Sharper terminal coding and multi-turn tool orchestration.",
+          "sourceUrl": "https://docs.z.ai/release-notes/new-released"
+        },
+        {
+          "version": "GLM-5",
+          "releasedAt": "2026-02-12",
+          "highlights": "Fifth-generation GLM frontier model with deep reasoning.",
+          "sourceUrl": "https://docs.z.ai/release-notes/new-released"
+        },
+        {
+          "version": "GLM-5.1",
+          "releasedAt": "2026-04-07",
+          "highlights": "Autonomous long-horizon engineering improvements.",
+          "sourceUrl": "https://z.ai/blog/glm-5.1"
+        },
+        {
+          "version": "GLM-5.2",
+          "releasedAt": "2026-06-16",
+          "highlights": "Expanded multimodal agentic execution and code synthesis.",
+          "sourceUrl": "https://z.ai/blog/glm-5.2"
+        },
+        {
+          "version": "GLM-5.3",
+          "releasedAt": "2026-08-14",
+          "highlights": "Current GLM-5.x frontier model for coding and reasoning.",
+          "sourceUrl": "https://z.ai/blog/glm-5.3"
+        }
+      ]
+    },
+    {
+      "id": "zai-glm-flash",
+      "companyId": "zai",
+      "name": "GLM Flash & Turbo",
+      "tierLabel": "Fast Tier",
+      "category": "fast",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "High-speed serving and compact open-weight companions to the GLM flagship line.",
+      "releases": [
+        {
+          "version": "GLM-4.7-Flash",
+          "releasedAt": "2026-01-19",
+          "highlights": "Lightweight high-speed deployment model for local & API use.",
+          "sourceUrl": "https://docs.bigmodel.cn/cn/update/new-releases"
+        },
+        {
+          "version": "GLM-5-Turbo",
+          "releasedAt": "2026-03-15",
+          "highlights": "Low-latency serving tier for GLM-5 agent workloads.",
+          "sourceUrl": "https://docs.bigmodel.cn/cn/update/new-releases"
+        },
+        {
+          "version": "GLM-5V-Turbo",
+          "releasedAt": "2026-04-02",
+          "highlights": "Fast visual reasoning and UI grounding model.",
+          "sourceUrl": "https://docs.bigmodel.cn/cn/update/new-releases"
+        },
+        {
+          "version": "GLM-5.3-Flash",
+          "releasedAt": "2026-08-26",
+          "highlights": "High-throughput Flash companion to GLM-5.3.",
+          "sourceUrl": "https://z.ai/blog/glm-5.3-flash"
+        }
+      ]
+    },
+    {
+      "id": "minimax-m",
+      "companyId": "minimax",
+      "name": "MiniMax M-Series",
+      "tierLabel": "Frontier MoE",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "MiniMax's lightning-attention and sparse-MoE models built for ultra-long-context agents.",
+      "releases": [
+        {
+          "version": "MiniMax-M1 (80k)",
+          "releasedAt": "2025-06-16",
+          "highlights": "1M context hybrid-attention open-weight reasoning model.",
+          "sourceUrl": "https://www.minimax.io/news/minimaxm1"
+        },
+        {
+          "version": "MiniMax M2.5",
+          "releasedAt": "2026-02-12",
+          "highlights": "High-speed software engineering and office workflow agent.",
+          "sourceUrl": "https://www.minimax.io/news/minimax-m25"
+        },
+        {
+          "version": "MiniMax M2.7",
+          "releasedAt": "2026-03-18",
+          "highlights": "Self-evolving agentic reasoning update.",
+          "sourceUrl": "https://www.minimax.io/news/minimax-m27-en"
+        },
+        {
+          "version": "MiniMax M3",
+          "releasedAt": "2026-06-01",
+          "highlights": "Third-generation flagship MoE model.",
+          "sourceUrl": "https://www.minimax.io/blog/minimax-m3"
+        },
+        {
+          "version": "MiniMax M3.1 Flash",
+          "releasedAt": "2026-10-19",
+          "highlights": "GA release delivering frontier-grade agentic speed at Flash pricing.",
+          "sourceUrl": "https://www.minimax.io/blog/minimax-m31f"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-mai",
+      "companyId": "microsoft",
+      "name": "Microsoft MAI",
+      "tierLabel": "Reasoning & Code",
+      "category": "coding",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Microsoft AI's first-party frontier thinking, coding, cyber, and decision models.",
+      "releases": [
+        {
+          "version": "MAI-Thinking-1",
+          "releasedAt": "2026-06-02",
+          "highlights": "First-party reasoning model launched across Microsoft Foundry.",
+          "sourceUrl": "https://microsoft.ai/models/mai-thinking-1/"
+        },
+        {
+          "version": "MAI-Cyber-1-Flash",
+          "releasedAt": "2026-07-27",
+          "highlights": "Security operations specialist model inside Microsoft Defender.",
+          "sourceUrl": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/"
+        },
+        {
+          "version": "MAI-Code-1.1-Flash",
+          "releasedAt": "2026-08-11",
+          "highlights": "Low-latency code generation and repository editing specialist.",
+          "sourceUrl": "https://microsoft.ai/pdf/MAI-Code-1.1-Flash-Model-Card.PDF"
+        },
+        {
+          "version": "Microsoft-Decision-1",
+          "releasedAt": "2026-10-12",
+          "highlights": "Compact high-precision structured decision model.",
+          "sourceUrl": "https://techcommunity.microsoft.com/blog/EducatorDeveloperBlog/not-every-decision-needs-an-llm-getting-started-with-microsoft-decision-1/4563468"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-phi",
+      "companyId": "microsoft",
+      "name": "Microsoft Phi",
+      "tierLabel": "Compact Open Weights",
+      "category": "fast",
+      "access": "open-weights",
+      "lifecycle": "consolidated",
+      "lifecycleNote": "No new Phi-5 release since April 2025 as Microsoft expanded Fara computer-use and MAI lines.",
+      "summary": "Synthetic-data-trained compact open-weight SLMs for edge and reasoning.",
+      "releases": [
+        {
+          "version": "Phi-3.5-mini",
+          "releasedAt": "2024-08-20",
+          "highlights": "3.8B 128K-context multilingual open SLM.",
+          "sourceUrl": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct"
+        },
+        {
+          "version": "Phi-4 (14B)",
+          "releasedAt": "2024-12-12",
+          "highlights": "14B dense SLM punching far above its size on STEM benchmarks.",
+          "sourceUrl": "https://huggingface.co/microsoft/phi-4"
+        },
+        {
+          "version": "Phi-4-multimodal",
+          "releasedAt": "2025-02-26",
+          "highlights": "Unified speech, vision, and text inputs in a compact footprint.",
+          "sourceUrl": "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        },
+        {
+          "version": "Phi-4-reasoning",
+          "releasedAt": "2025-04-30",
+          "highlights": "14B chain-of-thought reasoning weights (+ reasoning-plus).",
+          "sourceUrl": "https://huggingface.co/microsoft/Phi-4-reasoning"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-nemotron",
+      "companyId": "nvidia",
+      "name": "NVIDIA Nemotron",
+      "tierLabel": "Open Enterprise MoE",
+      "category": "frontier",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "NVIDIA's open-weight hybrid Mamba-Transformer and MoE models for enterprise reasoning and VL.",
+      "releases": [
+        {
+          "version": "Nemotron-4 15B",
+          "releasedAt": "2024-02-26",
+          "highlights": "Multilingual and coding foundation model trained on 8T tokens.",
+          "sourceUrl": "https://arxiv.org/abs/2402.16819"
+        },
+        {
+          "version": "Nemotron Ultra 253B",
+          "releasedAt": "2025-04-07",
+          "highlights": "NAS-optimized high-throughput open reasoning flagship.",
+          "sourceUrl": "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1"
+        },
+        {
+          "version": "Nemotron 3 Nano 30B",
+          "releasedAt": "2025-12-15",
+          "highlights": "30B-A3B hybrid MoE kicking off the Nemotron 3 architecture.",
+          "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16"
+        },
+        {
+          "version": "Nemotron 3 Super 120B",
+          "releasedAt": "2026-03-11",
+          "highlights": "120B-A12B enterprise reasoning and agentic workhorse.",
+          "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16"
+        },
+        {
+          "version": "Nemotron 3 Ultra 550B",
+          "releasedAt": "2026-06-04",
+          "highlights": "550B-A55B open-weight frontier model.",
+          "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+        },
+        {
+          "version": "Nemotron 3.5 Super VL & Bolt",
+          "releasedAt": "2026-10-15",
+          "highlights": "120B-A12B vision-language Super model plus 74B-A9B Bolt.",
+          "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+        }
+      ]
+    },
+    {
+      "id": "cohere-command",
+      "companyId": "cohere",
+      "name": "Cohere Command",
+      "tierLabel": "Enterprise Agentic",
+      "category": "workhorse",
+      "access": "open-weights",
+      "lifecycle": "active",
+      "summary": "Enterprise RAG, tool-calling, and multilingual flagship line now Apache-2.0 with Command A+.",
+      "releases": [
+        {
+          "version": "Command R+",
+          "releasedAt": "2024-04-04",
+          "highlights": "104B enterprise RAG and multi-step tool use flagship.",
+          "sourceUrl": "https://cohere.com/blog/command-r-plus-microsoft-azure"
+        },
+        {
+          "version": "Command A (111B)",
+          "releasedAt": "2025-03-13",
+          "highlights": "256K context model running on just two H100/A100 GPUs.",
+          "sourceUrl": "https://cohere.com/blog/command-a"
+        },
+        {
+          "version": "Command A+ (218B MoE)",
+          "releasedAt": "2026-05-20",
+          "highlights": "Apache-2.0 218B sparse MoE supporting 48 languages and vision.",
+          "sourceUrl": "https://cohere.com/blog/command-a-plus"
+        }
+      ]
+    }
+  ]
+}

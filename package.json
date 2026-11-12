@@ -1,0 +1,23 @@
+{
+  "name": "modelwatch",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MacRumors Buyer's Guide style release tracker and cadence analyzer for major AI model families.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/validate-data.mjs && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "start": "npm run build && vite preview",
+    "test": "node scripts/validate-data.mjs && vitest run",
+    "data:validate": "node scripts/validate-data.mjs",
+    "model:add": "node scripts/manage-models.mjs add",
+    "model:list": "node scripts/manage-models.mjs list"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ModelWatch — AI Model Release Tracker &amp; Refresh Cadence</title>
+    <meta
+      name="description"
+      content="Track days since last release and expected refresh cadence across OpenAI, Anthropic, Google DeepMind, xAI, Meta, DeepSeek, Qwen, Mistral, and more."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231b1b19'/%3E%3Ccircle cx='16' cy='16' r='9.5' fill='none' stroke='%23fbfaf7' stroke-width='2.2'/%3E%3Cpath d='M16 10.5V16l3.8 2.4' fill='none' stroke='%23e98a4f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem('modelwatch-theme-v3');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme =
+            saved === 'dark' || saved === 'light' ? saved : prefersDark ? 'dark' : 'light';
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
