@@ -48,7 +48,7 @@ function readInitialUrlState(): {
 
   const viewParam = params.get('view');
   const view: ViewMode =
-    viewParam === 'matrix' || viewParam === 'timeline' ? viewParam : 'cards';
+    viewParam === 'cards' || viewParam === 'timeline' ? viewParam : 'matrix';
 
   const sortParam = params.get('sort');
   const sort: SortMode =
@@ -107,7 +107,7 @@ function syncUrlState(filters: FilterState, asOfIso: string, locale: Locale): vo
   if (filters.access !== 'all') params.set('access', filters.access);
   if (filters.statusFilter !== 'all') params.set('status', filters.statusFilter);
   if (filters.sort !== 'company') params.set('sort', filters.sort);
-  if (filters.view !== 'cards') params.set('view', filters.view);
+  if (filters.view !== 'matrix') params.set('view', filters.view);
   if (filters.query.trim()) params.set('q', filters.query.trim());
   if (filters.hideConsolidated) params.set('hideConsolidated', '1');
   if (asOfIso !== getTodayLocalIso()) params.set('asOf', asOfIso);
@@ -147,8 +147,8 @@ function renderShell(): void {
 
         <div class="masthead-controls">
           <div class="seg-control" role="tablist" aria-label="View mode">
-            <button type="button" class="seg-item" data-view="cards">${escapeHtml(t.viewCards)}</button>
             <button type="button" class="seg-item" data-view="matrix">${escapeHtml(t.viewTable)}</button>
+            <button type="button" class="seg-item" data-view="cards">${escapeHtml(t.viewCards)}</button>
             <button type="button" class="seg-item" data-view="timeline">${escapeHtml(t.viewTimeline)}</button>
           </div>
 
@@ -322,7 +322,7 @@ document.addEventListener('click', (event) => {
 
   const viewBtn = target.closest<HTMLElement>('[data-view]');
   if (viewBtn) {
-    filters.view = (viewBtn.dataset.view as ViewMode) ?? 'cards';
+    filters.view = (viewBtn.dataset.view as ViewMode) ?? 'matrix';
     updateDynamicRegions();
     return;
   }
