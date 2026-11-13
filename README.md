@@ -41,3 +41,13 @@ Edit `src/data/models.json` (backed by `src/data/models.schema.json` for instant
 ```bash
 npm run build
 ```
+
+### Option 3: Autonomous Agent / Weekly Cron Refresh
+
+Point any coding agent at `CRON_AGENT.md` for an end-to-end source-verified refresh (catalog + AA/Arena links + Chinese localization + tests + GitHub Pages deploy), or run the scheduled wrapper directly:
+
+```bash
+npm run cron:check    # Verify cron environment, auth, and catalog invariants
+npm run cron:refresh  # Run unattended Copilot CLI refresh against CRON_AGENT.md
+```
+

@@ -12,7 +12,9 @@
     "test": "node scripts/validate-data.mjs && vitest run",
     "data:validate": "node scripts/validate-data.mjs",
     "model:add": "node scripts/manage-models.mjs add",
-    "model:list": "node scripts/manage-models.mjs list"
+    "model:list": "node scripts/manage-models.mjs list",
+    "cron:check": "bash scripts/cron-refresh.sh --check",
+    "cron:refresh": "bash scripts/cron-refresh.sh"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

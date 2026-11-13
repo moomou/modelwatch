@@ -248,7 +248,7 @@ export function renderTelemetryStrip(
         }
       </div>
       <div class="telemetry-right">
-        ${escapeHtml(t.telemetryVerified)} <code>${escapeHtml(summary.asOfDate)}</code>
+        ${escapeHtml(t.telemetryVerified)} <code>${escapeHtml(summary.lastVerified)}</code>
       </div>
     </div>
   `;
