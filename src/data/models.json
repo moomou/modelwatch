@@ -1,6 +1,6 @@
 {
   "$schema": "./models.schema.json",
-  "lastVerified": "2026-11-11",
+  "lastVerified": "2026-11-13",
   "companies": [
     {
       "id": "openai",
@@ -27,7 +27,7 @@
       "country": "US",
       "website": "https://deepmind.google",
       "accent": "#4285f4",
-      "summary": "Gemini 4 Argon & Carbon reasoning flagships, Gemini Flash, Gemma open weights, and Nano Banana / Omni."
+      "summary": "Gemini 4 Carbon, Argon & Hydrogen models, Gemma open weights, and Nano Banana / Omni."
     },
     {
       "id": "xai",
@@ -733,12 +733,12 @@
     {
       "id": "google-gemini-flash",
       "companyId": "google",
-      "name": "Gemini Flash",
+      "name": "Gemini Flash / Hydrogen",
       "tierLabel": "High-Speed Workhorse",
       "category": "workhorse",
       "access": "proprietary",
       "lifecycle": "active",
-      "summary": "High-efficiency multimodal reasoning workhorse iterating rapidly through the Gemini 3.x Flash series.",
+      "summary": "High-efficiency multimodal coding and agentic workhorse evolving from Gemini Flash into Gemini 4 Hydrogen.",
       "releases": [
         {
           "version": "Gemini 1.5 Flash",
@@ -785,8 +785,14 @@
         {
           "version": "Gemini 3.8 Flash",
           "releasedAt": "2026-09-02",
-          "highlights": "Current Flash flagship alongside Fairwind 3.8 Flash Cyber.",
+          "highlights": "3.8 Flash workhorse alongside Fairwind 3.8 Flash Cyber.",
           "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+        },
+        {
+          "version": "Gemini 4 Hydrogen",
+          "releasedAt": "2026-11-12",
+          "highlights": "1M unified context & long decode, four thinking levels up to xhigh, succeeding Gemini 3.8 Flash.",
+          "sourceUrl": "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen"
         }
       ]
     },
@@ -1247,9 +1253,15 @@
           "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
         },
         {
+          "version": "DeepSeek-V4.1-Flash",
+          "releasedAt": "2026-09-10",
+          "highlights": "Introduced native multimodal visual understanding in the fast MoE tier.",
+          "sourceUrl": "https://api-docs.deepseek.com/news/news260910"
+        },
+        {
           "version": "DeepSeek-V4.1 Flash (1017)",
           "releasedAt": "2026-10-17",
-          "highlights": "Sharper coding, reasoning, and latency efficiency in V4.1.",
+          "highlights": "RL-trained 1017 upgrade improving coding, runtime speed, and output efficiency.",
           "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
         }
       ]
@@ -1287,7 +1299,7 @@
       "category": "frontier",
       "access": "proprietary",
       "lifecycle": "active",
-      "summary": "Alibaba's largest flagship models culminating in the 2.4-trillion-parameter Qwen3.8 Max.",
+      "summary": "Alibaba's largest flagship models advancing from Qwen3.8 Max into the multimodal Qwen4-Max generation.",
       "releases": [
         {
           "version": "Qwen2.5-Max",
@@ -1316,8 +1328,14 @@
         {
           "version": "Qwen3.8 Max (2.4T)",
           "releasedAt": "2026-08-03",
-          "highlights": "2.4-trillion-parameter flagship topping Alibaba's model stack.",
+          "highlights": "2.4-trillion-parameter flagship topping Alibaba's Qwen3 stack.",
           "sourceUrl": "https://qwen.ai/blog?id=qwen3.8"
+        },
+        {
+          "version": "Qwen4-Max-Preview",
+          "releasedAt": "2026-11-11",
+          "highlights": "Next-generation Qwen4 multimodal flagship combining text, image, and video reasoning for coding and agents.",
+          "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models"
         }
       ]
     },
