@@ -5,6 +5,7 @@ import {
   computeCatalogMetrics,
   computeMedianRounded,
   daysBetweenIso,
+  getTodayUtcIso,
   ModelCatalog,
   parseUtcDayNumber,
 } from '../src/lib/cadence';
@@ -70,6 +71,38 @@ describe('Cadence engine & outlier resistance', () => {
     expect(geminiPro.currentRelease.version).toBe('Gemini 4 Argon');
     expect(geminiPro.daysSinceRelease).toBe(2);
     expect(geminiPro.status).toBe('just-released');
+  });
+
+  it('never hides verified live releases across UTC / APAC / Americas timezone midnight boundaries', () => {
+    // 2026-11-16T03:36:29Z is Nov 15 19:36 PST, Nov 16 03:36 UTC, and Nov 16 11:36 CST (Hangzhou)
+    expect(getTodayUtcIso(new Date('2026-11-16T03:36:29Z'))).toBe('2026-11-16');
+
+    const futureApacCatalog: ModelCatalog = {
+      ...(catalogJson as ModelCatalog),
+      lines: (catalogJson as ModelCatalog).lines.map((line) =>
+        line.id === 'qwen-max'
+          ? {
+              ...line,
+              releases: [
+                ...line.releases,
+                {
+                  version: 'Qwen-Test-APAC-Midnight',
+                  releasedAt: '2099-01-02',
+                  highlights: 'Simulated UTC+8 midnight launch ahead of Americas local date.',
+                  sourceUrl: 'https://qwen.ai',
+                },
+              ],
+            }
+          : line
+      ),
+    };
+
+    // Live mode (no explicit asOf override) must never filter out shipped catalog entries
+    const liveSnapshot = computeCatalogMetrics(futureApacCatalog);
+    const qwenMaxLive = liveSnapshot.lines.find((l) => l.id === 'qwen-max')!;
+    expect(qwenMaxLive.currentRelease.version).toBe('Qwen-Test-APAC-Midnight');
+    expect(qwenMaxLive.daysSinceRelease).toBe(0);
+    expect(qwenMaxLive.status).toBe('just-released');
   });
 });
 

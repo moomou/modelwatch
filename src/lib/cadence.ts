@@ -137,6 +137,13 @@ export function daysBetweenIso(earlierIso: string, laterIso: string): number {
   return parseUtcDayNumber(laterIso) - parseUtcDayNumber(earlierIso);
 }
 
+export function getTodayUtcIso(now: Date = new Date()): string {
+  const y = now.getUTCFullYear();
+  const m = String(now.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(now.getUTCDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
 export function getTodayLocalIso(now: Date = new Date()): string {
   const y = now.getFullYear();
   const m = String(now.getMonth() + 1).padStart(2, '0');
@@ -268,8 +275,11 @@ export function formatMonthYear(isoDate: string): string {
 
 export function computeCatalogMetrics(
   catalog: ModelCatalog,
-  asOfIso: string = getTodayLocalIso()
+  explicitAsOfIso?: string
 ): { lines: ComputedModelLine[]; summary: CatalogSummary; companies: Company[] } {
+  const asOfIso = explicitAsOfIso ?? getTodayUtcIso();
+  const isTimeTravel = explicitAsOfIso !== undefined;
+
   const companyMap = new Map<string, Company>();
   for (const c of catalog.companies) {
     companyMap.set(c.id, c);
@@ -282,9 +292,11 @@ export function computeCatalogMetrics(
     }
 
     const sortedRaw = [...raw.releases].sort((a, b) => a.releasedAt.localeCompare(b.releasedAt));
-    // Only include releases on or before asOfIso when time-traveling via ?asOf=YYYY-MM-DD;
-    // fallback to earliest release if asOfIso precedes the whole line.
-    const visibleRaw = sortedRaw.filter((r) => r.releasedAt <= asOfIso);
+    // Only filter releases by date when explicitly time-traveling via ?asOf=YYYY-MM-DD.
+    // In live mode, never hide verified shipped releases due to UTC/APAC vs Americas timezone offsets.
+    const visibleRaw = isTimeTravel
+      ? sortedRaw.filter((r) => r.releasedAt <= asOfIso)
+      : sortedRaw;
     const effectiveRaw = visibleRaw.length > 0 ? visibleRaw : [sortedRaw[0]];
 
     const completedIntervalsDays: number[] = [];

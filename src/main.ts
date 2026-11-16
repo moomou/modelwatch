@@ -2,7 +2,6 @@ import './styles.css';
 import baseCatalogJson from './data/models.json';
 import {
   computeCatalogMetrics,
-  getTodayLocalIso,
   ModelAccess,
   ModelCatalog,
   ModelCategory,
@@ -32,17 +31,17 @@ import {
 
 function readInitialUrlState(): {
   filters: FilterState;
-  asOfIso: string;
+  explicitAsOfIso: string | undefined;
 } {
   const params = new URLSearchParams(window.location.search);
   const rawAsOf = params.get('asOf');
-  let asOfIso = getTodayLocalIso();
+  let explicitAsOfIso: string | undefined;
   if (rawAsOf) {
     try {
       parseUtcDayNumber(rawAsOf);
-      asOfIso = rawAsOf;
+      explicitAsOfIso = rawAsOf;
     } catch {
-      // Fallback to today's local date
+      // Ignore invalid ?asOf= parameter and stay in live mode
     }
   }
 
@@ -95,11 +94,15 @@ function readInitialUrlState(): {
       view,
       hideConsolidated: params.get('hideConsolidated') === '1',
     },
-    asOfIso,
+    explicitAsOfIso,
   };
 }
 
-function syncUrlState(filters: FilterState, asOfIso: string, locale: Locale): void {
+function syncUrlState(
+  filters: FilterState,
+  explicitAsOfIso: string | undefined,
+  locale: Locale
+): void {
   const params = new URLSearchParams();
   if (locale !== 'en') params.set('lang', locale);
   if (filters.companyId !== 'all') params.set('company', filters.companyId);
@@ -110,7 +113,7 @@ function syncUrlState(filters: FilterState, asOfIso: string, locale: Locale): vo
   if (filters.view !== 'matrix') params.set('view', filters.view);
   if (filters.query.trim()) params.set('q', filters.query.trim());
   if (filters.hideConsolidated) params.set('hideConsolidated', '1');
-  if (asOfIso !== getTodayLocalIso()) params.set('asOf', asOfIso);
+  if (explicitAsOfIso) params.set('asOf', explicitAsOfIso);
 
   const qs = params.toString();
   const nextUrl = `${window.location.pathname}${qs ? `?${qs}` : ''}`;
@@ -122,10 +125,10 @@ let filters: FilterState = init.filters;
 let locale: Locale = detectInitialLocale();
 persistLocale(locale);
 
-const asOfIso = init.asOfIso;
+const explicitAsOfIso = init.explicitAsOfIso;
 const expandedLineIds = new Set<string>();
 
-const metrics = computeCatalogMetrics(baseCatalogJson as ModelCatalog, asOfIso);
+const metrics = computeCatalogMetrics(baseCatalogJson as ModelCatalog, explicitAsOfIso);
 const appRoot = document.querySelector<HTMLDivElement>('#app')!;
 
 function renderShell(): void {
@@ -246,7 +249,7 @@ function updateDynamicRegions(): void {
   if (filters.view === 'matrix') {
     resultsRoot.innerHTML = renderMatrixView(visibleLines, locale);
   } else if (filters.view === 'timeline') {
-    resultsRoot.innerHTML = renderTimelineView(visibleLines, asOfIso, locale);
+    resultsRoot.innerHTML = renderTimelineView(visibleLines, summary.asOfDate, locale);
   } else {
     resultsRoot.innerHTML = renderCardsView(
       visibleLines,
@@ -257,7 +260,7 @@ function updateDynamicRegions(): void {
     );
   }
 
-  syncUrlState(filters, asOfIso, locale);
+  syncUrlState(filters, explicitAsOfIso, locale);
 }
 
 renderShell();
