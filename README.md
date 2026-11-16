@@ -42,9 +42,9 @@ Edit `src/data/models.json` (backed by `src/data/models.schema.json` for instant
 npm run build
 ```
 
-### Option 3: Autonomous Agent / Weekly Cron Refresh
+### Option 3: Autonomous Agent / Scheduled Cron Refresh (Every 3 Days)
 
-Point any coding agent at `CRON_AGENT.md` for an end-to-end source-verified refresh (catalog + AA/Arena links + Chinese localization + tests + GitHub Pages deploy), or run the scheduled wrapper directly:
+Point any coding agent at `CRON_AGENT.md` for an end-to-end source-verified refresh (catalog + AA/Arena links + Chinese localization + tests + GitHub Pages deploy), or run the scheduled wrapper (`0 6 */3 * *` UTC) directly:
 
 ```bash
 npm run cron:check    # Verify cron environment, auth, and catalog invariants

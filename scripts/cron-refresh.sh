@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Weekly autonomous refresh runner for ModelWatch.
+# Scheduled autonomous refresh runner for ModelWatch (runs every 3 days via cron).
 # Invokes Copilot CLI in non-interactive autopilot mode against CRON_AGENT.md.
 
 export HOME="${HOME:-/home/moomou}"
@@ -43,10 +43,10 @@ ln -sfn "${RUN_LOG}" "${LOG_DIR}/latest.log"
 # Prune run logs older than 90 days
 find "${LOG_DIR}" -maxdepth 1 -name 'refresh-*.log' -mtime +90 -delete 2>/dev/null || true
 
-PROMPT="Read ${RUNBOOK} and execute the weekly ModelWatch model release refresh workflow end to end. Verify all primary sources, update src/data/models.json, src/lib/links.ts, and src/lib/i18n.ts as needed, run npm test && npm run build, commit and push main, and confirm GitHub Pages deployment."
+PROMPT="Read ${RUNBOOK} and execute the ModelWatch model release refresh workflow end to end. Verify all primary sources, update src/data/models.json, src/lib/links.ts, and src/lib/i18n.ts as needed, run npm test && npm run build, commit and push main, and confirm GitHub Pages deployment."
 
 {
-  echo "=== ModelWatch Weekly Refresh Started: $(date -Is) ==="
+  echo "=== ModelWatch Scheduled Refresh Started: $(date -Is) ==="
   cd "${REPO_DIR}"
   if [[ -n "${MODELWATCH_AGENT_CMD:-}" ]]; then
     eval "${MODELWATCH_AGENT_CMD}"
@@ -58,5 +58,5 @@ PROMPT="Read ${RUNBOOK} and execute the weekly ModelWatch model release refresh 
       --disable-client-telemetry \
       -p "${PROMPT}"
   fi
-  echo "=== ModelWatch Weekly Refresh Finished: $(date -Is) ==="
+  echo "=== ModelWatch Scheduled Refresh Finished: $(date -Is) ==="
 } 2>&1 | tee -a "${RUN_LOG}"
