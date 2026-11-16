@@ -241,7 +241,7 @@ const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
   'meta-muse-open': '於 Hugging Face 開源的 816B（42B 激活）稀疏 MoE 旗艦模型。',
   'deepseek-v-pro': '完整開放權重的 DeepSeek V4 Pro 正式版旗艦檢查點。',
   'deepseek-v-flash': 'V4.1 世代強化學習升級版（1017），兼顧程式碼品質、執行速度與輸出效率。',
-  'qwen-max': '通義千問 Qwen4 世代首發多模態旗艦預覽版，整合圖文與影片理解、深度推理與複雜代理任務執行。',
+  'qwen-max': '通義千問 Qwen4 世代多模態旗艦正式全面開放（GA），整合圖文與影片理解、深度推理與複雜代理任務執行。',
   'qwen-open': '源自 Qwen3.8 世代蒸餾的高效能 27B 開源權重模型。',
   'qwen-plus-flash': '支援文字、視覺、音訊與影片即時理解的全模態 Flash 模型。',
   'mistral-large': '高達 1 兆參數（52B 激活）的稀疏 MoE 旗艦，並開放模型權重。',
@@ -251,7 +251,7 @@ const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
   'zai-glm-flagship': '目前 GLM-5.x 系列最新程式開發與深度推理旗艦。',
   'zai-glm-flash': '搭配 GLM-5.3 推出的高吞吐量輕快版模型。',
   'minimax-m': '正式版發佈，以 Flash 等級定價提供前沿代理執行速度。',
-  'microsoft-mai': '專為高精準度結構化決策任務設計的輕量模型。',
+  'microsoft-mai': '新一代漏洞探索與資安掃描專精模型，在維持偵測準確度下降低 18% 掃描成本。',
   'nvidia-nemotron': '120B-A12B 視覺語言 Super 模型與 74B-A9B Bolt 高速模型。',
   'cohere-command': '採用 Apache 2.0 授權的 218B 稀疏 MoE，支援 48 種語言與視覺輸入。',
 };

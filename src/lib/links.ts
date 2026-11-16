@@ -118,6 +118,7 @@ const VERIFIED_AA_MODEL_SLUGS: Record<string, string> = {
   'deepseek-r1': 'deepseek-r1',
 
   // Alibaba Qwen
+  'qwen4-max': 'qwen4-max',
   'qwen3.8 max (2.4t)': 'qwen3-8-max',
   'qwen3.8-27b': 'qwen3-8-27b',
   'qwen3.5 397b-a17b': 'qwen3-5-397b-a17b',

@@ -1,6 +1,6 @@
 {
   "$schema": "./models.schema.json",
-  "lastVerified": "2026-11-13",
+  "lastVerified": "2026-11-16",
   "companies": [
     {
       "id": "openai",
@@ -63,7 +63,7 @@
       "country": "CN",
       "website": "https://qwen.ai",
       "accent": "#7c3aed",
-      "summary": "Qwen3.8 Max proprietary frontier alongside prolific Apache-2.0 open-weight and Omni-Flash releases."
+      "summary": "Qwen4-Max proprietary frontier alongside prolific Apache-2.0 open-weight and Omni-Flash releases."
     },
     {
       "id": "mistral",
@@ -1332,10 +1332,10 @@
           "sourceUrl": "https://qwen.ai/blog?id=qwen3.8"
         },
         {
-          "version": "Qwen4-Max-Preview",
-          "releasedAt": "2026-11-11",
-          "highlights": "Next-generation Qwen4 multimodal flagship combining text, image, and video reasoning for coding and agents.",
-          "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models"
+          "version": "Qwen4-Max",
+          "releasedAt": "2026-11-16",
+          "highlights": "General availability of Alibaba's Qwen4 multimodal flagship across global Model Studio endpoints.",
+          "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max"
         }
       ]
     },
@@ -1756,6 +1756,12 @@
           "releasedAt": "2026-10-12",
           "highlights": "Compact high-precision structured decision model.",
           "sourceUrl": "https://techcommunity.microsoft.com/blog/EducatorDeveloperBlog/not-every-decision-needs-an-llm-getting-started-with-microsoft-decision-1/4563468"
+        },
+        {
+          "version": "MAI-Cyber-1.1-Flash",
+          "releasedAt": "2026-10-27",
+          "highlights": "Focused vulnerability discovery upgrade cutting MDASH scan token costs by 18%.",
+          "sourceUrl": "https://microsoft.ai/news/mai-cyber-1-1-flash/"
         }
       ]
     },
