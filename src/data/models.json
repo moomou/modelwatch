@@ -1,6 +1,6 @@
 {
   "$schema": "./models.schema.json",
-  "lastVerified": "2026-11-16",
+  "lastVerified": "2026-11-18",
   "companies": [
     {
       "id": "openai",
@@ -9,7 +9,7 @@
       "country": "US",
       "website": "https://openai.com",
       "accent": "#10a37f",
-      "summary": "Frontier GPT-6 Astra/Sol/Terra/Luna tiers, Codex/Cyber specialists, and Realtime voice models."
+      "summary": "Frontier GPT-6.2 Astra/Sol, GPT-6.1 Terra, GPT-6 Luna tiers, Codex/Cyber specialists, and Realtime voice models."
     },
     {
       "id": "anthropic",
@@ -138,7 +138,7 @@
       "category": "frontier",
       "access": "proprietary",
       "lifecycle": "active",
-      "summary": "OpenAI's highest-intelligence frontier model tier, evolving from GPT-4 and Pro editions into GPT-6 Astra.",
+      "summary": "OpenAI's highest-intelligence frontier model tier, evolving from GPT-4 and Pro editions into GPT-6.2 Astra.",
       "releases": [
         {
           "version": "GPT-4",
@@ -193,6 +193,12 @@
           "releasedAt": "2026-09-03",
           "highlights": "Next-generation apex frontier model across reasoning, science, and alignment.",
           "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+        },
+        {
+          "version": "GPT-6.2 Astra",
+          "releasedAt": "2026-11-17",
+          "highlights": "1.05M-context apex flagship ($8/$40 per 1M) with Multi-agent Responses API delegation and background completion windows.",
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
         }
       ]
     },
@@ -265,6 +271,12 @@
           "releasedAt": "2026-09-29",
           "highlights": "Targeted upgrade for complex coding and sustained professional workflows.",
           "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        },
+        {
+          "version": "GPT-6.2 Sol",
+          "releasedAt": "2026-11-17",
+          "highlights": "1.05M-context reasoning and coding workhorse ($2/$10 per 1M) built for everyday engineering and multi-agent workflows.",
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
         }
       ]
     },
@@ -1762,6 +1774,12 @@
           "releasedAt": "2026-10-27",
           "highlights": "Focused vulnerability discovery upgrade cutting MDASH scan token costs by 18%.",
           "sourceUrl": "https://microsoft.ai/news/mai-cyber-1-1-flash/"
+        },
+        {
+          "version": "MAI Code 2 & Cyber 2 Flash",
+          "releasedAt": "2026-11-17",
+          "highlights": "Ignite 2026 suite led by MAI Code 2, MAI Code 2 Flash, and MAI Cyber 2 Flash (86% lower output cost) for Copilot and MDASH.",
+          "sourceUrl": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
         }
       ]
     },

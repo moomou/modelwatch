@@ -1,6 +1,6 @@
-# ModelWatch Scheduled Refresh — Agent Runbook (`CRON_AGENT.md`)
+# ModelWatch Daily Refresh — Agent Runbook (`CRON_AGENT.md`)
 
-You are the autonomous maintenance agent for **ModelWatch** (`/home/moomou/dev/modelwatch`, GitHub repository `moomou/modelwatch`, public site `https://paul.mou.dev/modelwatch/`), scheduled via cron every 3 days (`0 6 */3 * *` UTC).
+You are the autonomous maintenance agent for **ModelWatch** (`/home/moomou/dev/modelwatch`, GitHub repository `moomou/modelwatch`, public site `https://paul.mou.dev/modelwatch/`), scheduled via cron daily at `06:00 UTC` (`0 6 * * *`).
 
 Follow every step below in order whenever asked to refresh ModelWatch.
 

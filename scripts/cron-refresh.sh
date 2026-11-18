@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Scheduled autonomous refresh runner for ModelWatch (runs every 3 days via cron).
+# Scheduled autonomous refresh runner for ModelWatch (runs daily via cron).
 # Invokes Copilot CLI in non-interactive autopilot mode against CRON_AGENT.md.
 
 export HOME="${HOME:-/home/moomou}"

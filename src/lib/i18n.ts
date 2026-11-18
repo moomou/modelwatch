@@ -219,8 +219,8 @@ const ZH_LIFECYCLE_NOTES: Record<string, string> = {
 };
 
 const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
-  'openai-flagship': '新一代頂尖旗艦模型，全面提升科學推理、複雜規劃與對齊能力。',
-  'openai-sol': '針對大型程式碼庫與高強度專業工作流強化的推理主力版本。',
+  'openai-flagship': '1.05M 上下文頂尖旗艦（$8/$40 每百萬 token），支援 Responses API 多代理委派與背景批次折扣視窗。',
+  'openai-sol': '1.05M 上下文推理與程式開發主力（$2/$10 每百萬 token），專為日常軟體工程與多代理大規模協作打造。',
   'openai-terra': '升級視覺推理、精準電腦操作（Computer Use）與自然寫作能力。',
   'openai-luna': '導入 GPT-6 世代訓練技術的高速、低成本輕量首選。',
   'openai-codex-cyber': 'GPT-6 世代防禦型資安審計與程式碼漏洞修補專精模型。',
@@ -251,7 +251,7 @@ const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
   'zai-glm-flagship': '目前 GLM-5.x 系列最新程式開發與深度推理旗艦。',
   'zai-glm-flash': '搭配 GLM-5.3 推出的高吞吐量輕快版模型。',
   'minimax-m': '正式版發佈，以 Flash 等級定價提供前沿代理執行速度。',
-  'microsoft-mai': '新一代漏洞探索與資安掃描專精模型，在維持偵測準確度下降低 18% 掃描成本。',
+  'microsoft-mai': 'Ignite 2026 發佈 MAI Code 2、Code 2 Flash 與 MAI Cyber 2 Flash（輸出成本大降 86%），全面進駐 Copilot 與 MDASH。',
   'nvidia-nemotron': '120B-A12B 視覺語言 Super 模型與 74B-A9B Bolt 高速模型。',
   'cohere-command': '採用 Apache 2.0 授權的 218B 稀疏 MoE，支援 48 種語言與視覺輸入。',
 };
