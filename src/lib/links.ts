@@ -66,6 +66,7 @@ const VERIFIED_AA_MODEL_SLUGS: Record<string, string> = {
   'claude 3.5 haiku': 'claude-3-5-haiku',
 
   // Google DeepMind
+  'gemini 4 neon': 'gemini-4-neon',
   'gemini 4 hydrogen': 'gemini-4-hydrogen',
   'gemini 4 carbon': 'gemini-4-carbon',
   'gemini 4 argon': 'gemini-4-argon',

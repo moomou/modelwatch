@@ -1,6 +1,6 @@
 {
   "$schema": "./models.schema.json",
-  "lastVerified": "2026-11-18",
+  "lastVerified": "2026-11-19",
   "companies": [
     {
       "id": "openai",
@@ -27,7 +27,7 @@
       "country": "US",
       "website": "https://deepmind.google",
       "accent": "#4285f4",
-      "summary": "Gemini 4 Carbon, Argon & Hydrogen models, Gemma open weights, and Nano Banana / Omni."
+      "summary": "Gemini 4 Carbon, Neon & Hydrogen models, Gemma open weights, and Nano Banana / Omni."
     },
     {
       "id": "xai",
@@ -739,6 +739,24 @@
           "releasedAt": "2026-11-10",
           "highlights": "API GA for DeepMind's most capable sustained agentic and scientific model.",
           "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        }
+      ]
+    },
+    {
+      "id": "google-gemini-neon",
+      "companyId": "google",
+      "name": "Gemini Neon",
+      "tierLabel": "Frontier Reasoning",
+      "category": "frontier",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Google's frontier reasoning tier between Carbon and Hydrogen for complex, high-frequency coding, knowledge work, and science.",
+      "releases": [
+        {
+          "version": "Gemini 4 Neon",
+          "releasedAt": "2026-11-18",
+          "highlights": "Frontier-level reasoning with faster end-to-end completion for complex, high-frequency coding, knowledge work, and science.",
+          "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
         }
       ]
     },
