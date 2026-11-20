@@ -1,6 +1,6 @@
 {
   "$schema": "./models.schema.json",
-  "lastVerified": "2026-11-19",
+  "lastVerified": "2026-11-20",
   "companies": [
     {
       "id": "openai",
@@ -27,7 +27,7 @@
       "country": "US",
       "website": "https://deepmind.google",
       "accent": "#4285f4",
-      "summary": "Gemini 4 Carbon, Neon & Hydrogen models, Gemma open weights, and Nano Banana / Omni."
+      "summary": "Gemini 4 Carbon, Neon & Hydrogen models, Gemma open weights, Nano Banana / Omni, and Genie interactive worlds."
     },
     {
       "id": "xai",
@@ -108,7 +108,7 @@
       "country": "US",
       "website": "https://microsoft.ai",
       "accent": "#00a4ef",
-      "summary": "In-house MAI reasoning, coding, and voice models alongside the open-weight Phi small-model family."
+      "summary": "In-house MAI reasoning, coding, and voice models alongside compact open-weight Phi and Aion SLMs."
     },
     {
       "id": "nvidia",
@@ -457,6 +457,12 @@
           "releasedAt": "2026-09-10",
           "highlights": "Next-generation real-time multimodal voice and live interaction API model.",
           "sourceUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+        },
+        {
+          "version": "GPT-Live-1.1",
+          "releasedAt": "2026-11-19",
+          "highlights": "Improved multilingual pronunciation, accent consistency, transcription accuracy, and backend delegation for full-duplex voice.",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog"
         }
       ]
     },
@@ -949,6 +955,24 @@
           "releasedAt": "2026-11-05",
           "highlights": "15s video generation, conversational video editing, and 30% lower cost.",
           "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog"
+        }
+      ]
+    },
+    {
+      "id": "google-genie",
+      "companyId": "google",
+      "name": "Genie Interactive Worlds",
+      "tierLabel": "Interactive World Model",
+      "category": "multimodal",
+      "access": "proprietary",
+      "lifecycle": "active",
+      "summary": "Real-time steerable world-generation models with synchronized video and audio.",
+      "releases": [
+        {
+          "version": "Genie 4",
+          "releasedAt": "2026-11-19",
+          "highlights": "Real-time steerable 720p worlds at 24 fps with synchronized stereo audio.",
+          "sourceUrl": "https://aistudio.google.com/docs/changelog#11-19-2026"
         }
       ]
     },
@@ -1804,13 +1828,12 @@
     {
       "id": "microsoft-phi",
       "companyId": "microsoft",
-      "name": "Microsoft Phi",
+      "name": "Microsoft Phi & Aion",
       "tierLabel": "Compact Open Weights",
       "category": "fast",
       "access": "open-weights",
-      "lifecycle": "consolidated",
-      "lifecycleNote": "No new Phi-5 release since April 2025 as Microsoft expanded Fara computer-use and MAI lines.",
-      "summary": "Synthetic-data-trained compact open-weight SLMs for edge and reasoning.",
+      "lifecycle": "active",
+      "summary": "Compact open-weight SLMs for edge and on-device use, spanning Phi through Aion.",
       "releases": [
         {
           "version": "Phi-3.5-mini",
@@ -1835,6 +1858,12 @@
           "releasedAt": "2025-04-30",
           "highlights": "14B chain-of-thought reasoning weights (+ reasoning-plus).",
           "sourceUrl": "https://huggingface.co/microsoft/Phi-4-reasoning"
+        },
+        {
+          "version": "Aion 1.0 Instruct",
+          "releasedAt": "2026-11-19",
+          "highlights": "MIT-licensed 2.3B on-device Windows SLM with 32K context, multilingual generation, and tool calling.",
+          "sourceUrl": "https://blogs.windows.com/msedgedev/2026/11/19/hybrid-intelligence-on-the-web-introducing-aion-instruct-and-prompt-api-in-microsoft-edge/"
         }
       ]
     },

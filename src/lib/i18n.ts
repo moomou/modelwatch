@@ -160,6 +160,7 @@ const ZH_TIER_LABELS: Record<string, string> = {
   'Voice & Speech': '語音與對話',
   'Speech & Audio': '語音與音訊',
   'Image & Video Gen': '影像與影片生成',
+  'Interactive World Model': '互動世界模型',
   'Open Weights': '開源權重',
   'Classic Open Weights': '經典開源權重',
   'Mythos Apex Tier': 'Mythos 頂尖層級',
@@ -183,6 +184,7 @@ const ZH_LINE_NAMES: Record<string, string> = {
   'google-gemini-flash-lite': 'Gemini Flash-Lite 輕量系列',
   'google-gemma': 'Gemma 開源系列',
   'google-nano-banana': 'Nano Banana 與 Omni 影音生成',
+  'google-genie': 'Genie 互動世界模型',
   'xai-grok-flagship': 'Grok 旗艦系列',
   'xai-grok-fast': 'Grok Fast / Mini 系列',
   'xai-grok-voice': 'Grok Voice 語音系列',
@@ -203,7 +205,7 @@ const ZH_LINE_NAMES: Record<string, string> = {
   'zai-glm-flash': 'GLM Flash 與 Turbo 系列',
   'minimax-m': 'MiniMax M 系列',
   'microsoft-mai': 'Microsoft MAI 系列',
-  'microsoft-phi': 'Microsoft Phi 輕量開源系列',
+  'microsoft-phi': 'Microsoft Phi 與 Aion 輕量開源系列',
   'nvidia-nemotron': 'NVIDIA Nemotron 開源系列',
   'cohere-command': 'Cohere Command 企業系列',
 };
@@ -215,8 +217,6 @@ const ZH_LIFECYCLE_NOTES: Record<string, string> = {
     'Meta 於 2026 年將開源重心轉向新一代 Muse Open 系列（Muse Glimmer 與 Muse Spark Open）。',
   'deepseek-r-series':
     '深度思考模式已直接整合至 DeepSeek V3.1、V3.2 與 V4 Pro/Flash，目前尚未單獨發佈 R2。',
-  'microsoft-phi':
-    '自 2025 年 4 月後尚未推出 Phi-5，微軟重心轉向 Fara 電腦操作代理與 MAI 自研系列。',
 };
 
 const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
@@ -225,7 +225,7 @@ const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
   'openai-terra': '升級視覺推理、精準電腦操作（Computer Use）與自然寫作能力。',
   'openai-luna': '導入 GPT-6 世代訓練技術的高速、低成本輕量首選。',
   'openai-codex-cyber': 'GPT-6 世代防禦型資安審計與程式碼漏洞修補專精模型。',
-  'openai-realtime': '新一代低延遲全雙工語音與即時多模態 API 模型。',
+  'openai-realtime': '提升多語音對話的發音、口音一致性與轉錄準確度，並強化後端任務委派。',
   'openai-oss': 'OpenAI 自 GPT-2 以來首度發佈的 Apache 2.0 開源權重推理模型。',
   'anthropic-fable': '輸出速度提升高達 30%，同時降低每百萬 token 計費成本。',
   'anthropic-opus': '在多數任務追平 Fable 5.1 水準，典型工作負載成本降低約 40%。',
@@ -237,6 +237,7 @@ const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
   'google-gemini-flash-lite': '超高吞吐量、極低單價預設模型，承接原 2.5 Flash 流量。',
   'google-gemma': '單張 GPU 即可部署的 12B 統一多模態開源架構。',
   'google-nano-banana': '支援 15 秒影片生成與對話式影片編輯，輸出成本降低 30%。',
+  'google-genie': '可即時操控的 720p 互動世界生成模型，以 24 fps 串流畫面並同步產生立體聲音訊。',
   'xai-grok-flagship': 'xAI 目前最新旗艦，顯著強化軟體工程與代理工具呼叫準確度。',
   'xai-grok-voice': '第三代高擬真多模態即時語音對話架構。',
   'meta-muse-frontier': 'Meta AI Research 最新發佈的前沿旗艦模型。',
@@ -254,6 +255,7 @@ const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
   'zai-glm-flash': '搭配 GLM-5.3 推出的高吞吐量輕快版模型。',
   'minimax-m': '正式版發佈，以 Flash 等級定價提供前沿代理執行速度。',
   'microsoft-mai': 'Ignite 2026 發佈 MAI Code 2、Code 2 Flash 與 MAI Cyber 2 Flash（輸出成本大降 86%），全面進駐 Copilot 與 MDASH。',
+  'microsoft-phi': '採 MIT 授權的 2.3B Windows 裝置端小型語言模型，支援 32K 上下文、多語生成與工具呼叫。',
   'nvidia-nemotron': '120B-A12B 視覺語言 Super 模型與 74B-A9B Bolt 高速模型。',
   'cohere-command': '採用 Apache 2.0 授權的 218B 稀疏 MoE，支援 48 種語言與視覺輸入。',
 };
