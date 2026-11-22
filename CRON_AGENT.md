@@ -19,33 +19,39 @@ Note the current `lastVerified` date in `src/data/models.json` and the latest re
 
 ---
 
-## 2. Sweep Authoritative Release Sources
+## 2. Sweep Authoritative Release Sources (Incremental & Parallel)
 
-Check what shipped since `lastVerified` (and catch any missed intermediate releases on active tracks).
+Check what shipped since `lastVerified` (using a **5-day lookback buffer** before `lastVerified` to catch late-indexed releases, through today's UTC date `date -u +%Y-%m-%d`).
 
-### 2A. Cross-Provider Confirmed Trackers (Check First)
+**Execution efficiency rules (mandatory for reliable unattended cron runs):**
+- **Incremental scope only**: Do **not** re-audit historical months already verified in `src/data/models.json`. Only inspect entries dated within `(lastVerified - 5 days) .. today_utc`.
+- **Direct parallel `web_fetch` batches — never spawn subagents**: Issue `web_fetch` calls in parallel batches directly in the main session (Batch 1: the 3 cross-provider trackers + 14 BenchLM provider feeds; Batch 2: primary vendor changelogs + Hugging Face JSON API check). Do **not** delegate the sweep to background `task` / `research` subagents, which risk hitting non-interactive background-wait timeouts.
+
+### 2A. Cross-Provider Confirmed Trackers (Check First in Parallel)
 1. `https://benchlm.ai/model-updates` (source-linked confirmed releases)
 2. `https://artificialanalysis.ai/leaderboards/models` (live benchmarked models & exact AA `/models/<slug>` URLs)
 3. `https://llm-stats.com/llm-updates`
 
 ### 2B. Primary Vendor Changelogs & Provider Feeds (Verify Every Addition Here)
-Every release added to `src/data/models.json` **must** have an exact `YYYY-MM-DD` date verified from an official primary source (`openai.com`, `anthropic.com`, `aistudio.google.com` / `blog.google`, `x.ai` / `docs.x.ai`, `ai.meta.com` / `research.meta.ai`, `api-docs.deepseek.com`, `qwen.ai` / `alibabacloud.com`, `mistral.ai`, `kimi.ai`, `z.ai` / `docs.z.ai`, `minimax.io`, `microsoft.ai`, `huggingface.co`, `cohere.com`):
+Every release added to `src/data/models.json` **must** have an exact `YYYY-MM-DD` date verified from an official primary source (`developers.openai.com` / `openai.com`, `anthropic.com`, `aistudio.google.com` / `blog.google`, `docs.x.ai` / `x.ai`, `research.meta.ai` / `ai.meta.com`, `api-docs.deepseek.com`, `alibabacloud.com` / `qwen.ai`, `mistral.ai`, `kimi.ai`, `docs.z.ai` / `z.ai`, `minimax.io`, `microsoft.ai` / `blogs.windows.com`, `huggingface.co`, `cohere.com`).
 
-| Lab (`companyId`) | BenchLM Provider Feed | Primary Changelog / Release Hub |
+*(Note on headless HTTP fetches: `openai.com/news/`, `x.ai/news`, and `microsoft.ai/news/` are Cloudflare-gated (`403`) to headless fetches — use the direct HTTP-200 developer changelogs and Hugging Face API endpoints listed below instead of retrying `403` URLs. On `anthropic.com/news`, the top date next to `Latest news` is today's page render date, not an article date.)*
+
+| Lab (`companyId`) | BenchLM Provider Feed | HTTP-200 Primary Changelog / Release Hub |
 | --- | --- | --- |
-| `openai` | `https://benchlm.ai/model-updates/providers/openai` | `https://developers.openai.com/api/docs/changelog` / `https://openai.com/news/` |
+| `openai` | `https://benchlm.ai/model-updates/providers/openai` | `https://developers.openai.com/api/docs/changelog` |
 | `anthropic` | `https://benchlm.ai/model-updates/providers/anthropic` | `https://www.anthropic.com/news` |
 | `google` | `https://benchlm.ai/model-updates/providers/google` | `https://aistudio.google.com/docs/changelog` |
-| `xai` | `https://benchlm.ai/model-updates/providers/xai` | `https://docs.x.ai/developers/release-notes` / `https://x.ai/news` |
-| `meta` | `https://benchlm.ai/model-updates/providers/meta` | `https://research.meta.ai/blog/` / `https://ai.meta.com/blog/` |
+| `xai` | `https://benchlm.ai/model-updates/providers/xai` | `https://docs.x.ai/developers/release-notes` |
+| `meta` | `https://benchlm.ai/model-updates/providers/meta` | `https://research.meta.ai/blog/` |
 | `deepseek` | `https://benchlm.ai/model-updates/providers/deepseek` | `https://api-docs.deepseek.com/updates/` |
-| `alibaba` | `https://benchlm.ai/model-updates/providers/alibaba` | `https://www.alibabacloud.com/help/en/model-studio/newly-released-models` / `https://qwen.ai` |
+| `alibaba` | `https://benchlm.ai/model-updates/providers/alibaba` | `https://www.alibabacloud.com/help/en/model-studio/newly-released-models` |
 | `mistral` | `https://benchlm.ai/model-updates/providers/mistral` | `https://mistral.ai/news/` |
-| `moonshot` | `https://benchlm.ai/model-updates/providers/moonshot-ai` | `https://www.kimi.ai/blog` / `https://huggingface.co/moonshotai` |
-| `zai` | `https://benchlm.ai/model-updates/providers/z-ai` | `https://docs.z.ai/release-notes/new-released` / `https://z.ai/blog` |
-| `minimax` | `https://benchlm.ai/model-updates/providers/minimax` | `https://www.minimax.io/blog` |
-| `microsoft` | `https://benchlm.ai/model-updates/providers/microsoft` | `https://microsoft.ai/news/` |
-| `nvidia` | `https://benchlm.ai/model-updates/providers/nvidia` | `https://huggingface.co/nvidia` |
+| `moonshot` | `https://benchlm.ai/model-updates/providers/moonshot-ai` | `https://www.kimi.ai/blog` & HF `moonshotai` |
+| `zai` | `https://benchlm.ai/model-updates/providers/z-ai` | `https://docs.z.ai/release-notes/new-released` |
+| `minimax` | `https://benchlm.ai/model-updates/providers/minimax` | `https://www.minimax.io/blog` & HF `MiniMaxAI` |
+| `microsoft` | `https://benchlm.ai/model-updates/providers/microsoft` | `https://huggingface.co/api/models?author=microsoft&sort=createdAt&direction=-1&limit=8` (plus targeted web search for `site:microsoft.ai/news` if needed) |
+| `nvidia` | `https://benchlm.ai/model-updates/providers/nvidia` | `https://huggingface.co/api/models?author=nvidia&sort=createdAt&direction=-1&limit=8` |
 | `cohere` | `https://benchlm.ai/model-updates/providers/cohere` | `https://cohere.com/blog` |
 
 ### 2C. Strict Data-Quality Rules
@@ -73,7 +79,7 @@ npm run model:add -- \
   --highlights "<Concise 1-sentence technical summary>"
 ```
 
-If **zero** new releases shipped since the last check, still update `"lastVerified"` in `src/data/models.json` to today's `YYYY-MM-DD` date (`date +%Y-%m-%d`) so the site reflects a fresh verification pass.
+If **zero** new releases shipped since the last check, still update `"lastVerified"` in `src/data/models.json` to today's UTC `YYYY-MM-DD` date (`date -u +%Y-%m-%d`) so the site reflects a fresh verification pass.
 
 ### 3B. Verify Artificial Analysis & Arena Links (`src/lib/links.ts`)
 For each newly added model, check whether Artificial Analysis has a live HTTP-200 model page:
@@ -123,7 +129,7 @@ If `git status --short` shows changes:
 
 ```bash
 git add src/data/models.json src/lib/links.ts src/lib/i18n.ts
-git commit -m "Refresh model release data through $(date +%Y-%m-%d)"
+git commit -m "Refresh model release data through $(date -u +%Y-%m-%d)"
 git push origin main
 ```
 
