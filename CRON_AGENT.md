@@ -138,7 +138,7 @@ Wait for the `Deploy GitHub Pages` GitHub Actions workflow to succeed and confir
 ```bash
 sleep 5
 run_id=$(gh run list -R moomou/modelwatch --limit 1 --json databaseId --jq '.[0].databaseId')
-gh run watch "$run_id" -R moomou/modelwatch --exit-status
+gh run watch "$run_id" -R moomou/modelwatch --exit-status || (gh run rerun "$run_id" -R moomou/modelwatch --failed && sleep 5 && gh run watch "$run_id" -R moomou/modelwatch --exit-status)
 curl -sfI "https://paul.mou.dev/modelwatch/" | head -n 5
 ```
 
