@@ -1,6 +1,6 @@
 {
   "$schema": "./models.schema.json",
-  "lastVerified": "2026-11-23",
+  "lastVerified": "2026-11-24",
   "companies": [
     {
       "id": "openai",
@@ -1694,8 +1694,14 @@
         {
           "version": "GLM-5.3",
           "releasedAt": "2026-08-14",
-          "highlights": "Current GLM-5.x frontier model for coding and reasoning.",
+          "highlights": "Stronger coding, cybersecurity, and long-horizon agent performance.",
           "sourceUrl": "https://z.ai/blog/glm-5.3"
+        },
+        {
+          "version": "GLM-5.4",
+          "releasedAt": "2026-11-23",
+          "highlights": "First Loop Transformer flagship, reusing 28 layers across two iterations for deeper 1M-context coding and reasoning.",
+          "sourceUrl": "https://z.ai/blog/glm-5.4"
         }
       ]
     },

@@ -251,7 +251,7 @@ const ZH_CURRENT_HIGHLIGHTS: Record<string, string> = {
   'mistral-workhorse': '128B 企業主力模型，與 Vibe 遠端程式代理同步推出。',
   'mistral-voxtral': '整合轉錄、即時語音與自然語音合成的第三代音訊套件。',
   'moonshot-kimi': '名列開源榜首的 K3.1 Pro 代理與程式開發旗艦權重模型。',
-  'zai-glm-flagship': '目前 GLM-5.x 系列最新程式開發與深度推理旗艦。',
+  'zai-glm-flagship': '首款 Loop Transformer 旗艦，將 GLM-5 的 28 層重複運算兩輪，在不增加參數下強化 100 萬 token 長上下文程式開發與推理。',
   'zai-glm-flash': '搭配 GLM-5.3 推出的高吞吐量輕快版模型。',
   'minimax-m': '正式版發佈，以 Flash 等級定價提供前沿代理執行速度。',
   'microsoft-mai': 'Ignite 2026 發佈 MAI Code 2、Code 2 Flash 與 MAI Cyber 2 Flash（輸出成本大降 86%），全面進駐 Copilot 與 MDASH。',
