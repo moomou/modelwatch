@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Scheduled autonomous refresh runner for ModelWatch (runs daily via cron).
+# Scheduled autonomous refresh runner for ModelWatch (runs twice daily at 08:00 & 20:00 UTC via cron).
 # Invokes Copilot CLI in non-interactive autopilot mode against CRON_AGENT.md.
 
 export HOME="${HOME:-/home/moomou}"
@@ -46,7 +46,7 @@ ln -sfn "${RUN_LOG}" "${LOG_DIR}/latest.log"
 # Prune run logs older than 90 days
 find "${LOG_DIR}" -maxdepth 1 -name 'refresh-*.log' -mtime +90 -delete 2>/dev/null || true
 
-PROMPT="Today in UTC is ${TODAY_UTC}. Read ${RUNBOOK} and execute the incremental ModelWatch model release refresh workflow end to end using direct parallel web_fetch calls (do not spawn subagents and do not re-audit historical months prior to lastVerified minus 5 days). Verify primary sources for any new candidate releases, update src/data/models.json (setting lastVerified to ${TODAY_UTC}), src/lib/links.ts, and src/lib/i18n.ts as needed, run npm test && npm run build, commit and push main, and confirm GitHub Pages deployment."
+PROMPT="Today in UTC is ${TODAY_UTC}. Read ${RUNBOOK} and execute the incremental ModelWatch model release refresh workflow end to end using direct parallel web_fetch calls (do not spawn subagents and do not re-audit historical months prior to lastVerified minus 5 days). Verify primary sources for any new candidate releases, update src/data/models.json (setting lastVerified to ${TODAY_UTC}), src/lib/links.ts, and src/lib/i18n.ts as needed, run npm test && npm run build, and if git status shows changes, commit and push main and confirm GitHub Pages deployment (if lastVerified is already ${TODAY_UTC} with zero new releases, no commit is needed)."
 
 verify_refresh_state() {
   local start_utc="$1"

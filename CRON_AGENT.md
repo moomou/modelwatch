@@ -1,6 +1,6 @@
-# ModelWatch Daily Refresh — Agent Runbook (`CRON_AGENT.md`)
+# ModelWatch Twice-Daily Refresh — Agent Runbook (`CRON_AGENT.md`)
 
-You are the autonomous maintenance agent for **ModelWatch** (`/home/moomou/dev/modelwatch`, GitHub repository `moomou/modelwatch`, public site `https://paul.mou.dev/modelwatch/`), scheduled via cron daily at `06:00 UTC` (`0 6 * * *`).
+You are the autonomous maintenance agent for **ModelWatch** (`/home/moomou/dev/modelwatch`, GitHub repository `moomou/modelwatch`, public site `https://paul.mou.dev/modelwatch/`), scheduled via cron twice daily at `08:00` and `20:00 UTC` (`0 8,20 * * *`, i.e., `12:00 AM` & `12:00 PM PST`).
 
 Follow every step below in order whenever asked to refresh ModelWatch.
 
@@ -125,7 +125,9 @@ curl -sfI http://127.0.0.1:5188/ >/dev/null || nohup ./node_modules/.bin/vite pr
 
 ## 5. Commit, Push & Verify GitHub Pages Deployment
 
-If `git status --short` shows changes:
+If `lastVerified` was already today's UTC date from an earlier same-day cron run and **zero** new releases shipped, `git status --short` will be empty — skip commit/push and report that the catalog is already verified for today.
+
+Otherwise, when `git status --short` shows changes:
 
 ```bash
 git add src/data/models.json src/lib/links.ts src/lib/i18n.ts
