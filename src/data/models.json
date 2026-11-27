@@ -1,6 +1,6 @@
 {
   "$schema": "./models.schema.json",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "companies": [
     {
       "id": "openai",
